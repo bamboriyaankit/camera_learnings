@@ -2798,3 +2798,1264 @@ window.FIELD_GUIDE.menuReference = {
     "lesson": "first-day"
   }
 };
+
+// Camera-controls increment: Sony sources checked 2026-10-11.
+window.FIELD_GUIDE.lessons.push(...[
+  {
+    "id": "auto-program",
+    "title": "Auto and P: choose how much to control",
+    "time": 9,
+    "definition": "Auto chooses most settings for you. P (Program Auto) chooses shutter speed and aperture while leaving other shooting choices available.",
+    "intro": "Get a quick photograph, then learn to spot when the camera’s choices need your help.",
+    "prerequisites": [
+      "first-day",
+      "exposure-controls"
+    ],
+    "sections": [
+      [
+        "Two Auto modes, one dial position",
+        "Turn the mode dial to Auto, then MENU → Camera Settings1 → Auto Mode. Intelligent Auto recognizes a scene and chooses settings. Superior Auto can take multiple frames and combine them for some dark or backlit scenes. Scene recognition can be wrong; neither mode guarantees a sharp subject or a pleasing background. Most settings are automatic, so a greyed-out control in Auto may be expected."
+      ],
+      [
+        "Try Intelligent Auto first",
+        "Use a stationary subject in good light. Choose Intelligent Auto, half-press to focus, then press fully. Review the subject at enlarged size. Look at the recorded shutter speed, aperture and ISO: those choices help explain motion blur, background detail and noise. Auto is useful when speed of operation matters more than controlling every setting."
+      ],
+      [
+        "What Superior Auto adds",
+        "Superior Auto may make a composite: one result assembled from several captures. Keep the camera steady until it finishes; capture and processing can take longer. Movement between captures can make this a poor choice for an unpredictable subject. With File Format RAW or RAW & JPEG, the camera cannot make the composite. Try JPEG for this experiment. MENU → Camera Settings1 → Superior Auto Img. Extract. → Auto normally saves the selected result; Off saves all continuously captured images, with documented exceptions such as Hand-held Twilight saving one combined image. “Off” does not turn Superior Auto off."
+      ],
+      [
+        "P gives you room to learn",
+        "Turn the dial to P. The camera chooses shutter speed and aperture, but you can choose ISO, focus, drive mode and exposure compensation. Start with ISO AUTO, Single Shooting, AF-S for a still subject and a focus area you can place reliably. In P, choosing numeric ISO fixes that sensitivity while the camera still chooses shutter/aperture. P does not mean professional, and M exposure does not mean manual focus."
+      ],
+      [
+        "Program shift: change the pair",
+        "Without flash, turn the top control dial in P. P becomes P*: the camera offers different shutter/aperture pairs for the same exposure target. For example, a faster shutter paired with a wider aperture trades background depth for less motion blur; this is an illustration, not measured camera data. Brightness and lens limits can prevent a shift. As light changes, the values can change while preserving the shift. Change out of P or turn the camera off to cancel it. Use A when aperture is your priority, or S when shutter speed is your priority."
+      ],
+      [
+        "Auto ISO’s shutter threshold is not a guarantee",
+        "In P or A with ISO AUTO, MENU → Camera Settings1 → ISO Setting → ISO AUTO Min. SS chooses when the camera starts raising ISO instead of lengthening exposure. Try 1/250 for a gently moving person in good light, then inspect the result and choose faster if needed. If ISO reaches its allowed maximum, the shutter can still become slower than this threshold. Check the actual shutter speed before shooting. ISO AUTO limits are set under ISO → ISO AUTO → right side of the wheel; ISO Range Limit instead limits manually selected ISO values."
+      ],
+      [
+        "Ask for a different brightness",
+        "Exposure compensation changes the automatic exposure target; program shift changes the shutter/aperture combination. In P, start at 0 EV and try −0.3 EV if a bright subject loses detail, or +0.3 EV if the subject looks too dark. Review and adjust. Compensation is unavailable in Intelligent Auto and Superior Auto. A slower shutter can still blur movement even if the brightness looks right."
+      ],
+      [
+        "Choose by the photograph you need",
+        "Use Intelligent Auto for a quick start; try Superior Auto for a still dark/backlit JPEG scene; choose P to control focus, drive and brightness without choosing aperture/shutter directly. Move to A for background control or S for action. The useful comparison with your phone is the resulting subject detail and timing, not the letter on the camera dial."
+      ]
+    ],
+    "exercise": "Photograph the same window-lit object in Intelligent Auto and P. In P, make one shifted pair and one small exposure-compensation change. Compare four images at the same viewing size; record which change affected brightness and which affected depth or motion. Cancel P* and return compensation to 0 afterward.",
+    "question": "In P with ISO AUTO, will ISO AUTO Min. SS always prevent a slower shutter?",
+    "options": [
+      "Yes, it is a hard shutter-speed lock",
+      "No; the camera can go slower once the Auto ISO maximum is reached",
+      "It controls the autofocus motor"
+    ],
+    "answer": 1,
+    "explanation": "It is the threshold for raising ISO, not an absolute floor. Watch the displayed shutter speed and use S or M when direct shutter control is needed.",
+    "sources": [
+      {
+        "label": "Auto Mode",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273567.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Intelligent Auto",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241165.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Superior Auto",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273552.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Superior Auto Img. Extract.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241276.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Program Auto and Program Shift",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264642.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "ISO AUTO Min. SS",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264687.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "ISO Range Limit",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280317.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "ISO and Auto ISO limits",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264686.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Exposure compensation",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264676.html",
+        "checked": "2026-10-11"
+      }
+    ],
+    "category": "CAMERA CONTROLS",
+    "symbol": "◎",
+    "stage": "controls"
+  },
+  {
+    "id": "drive-bracketing",
+    "title": "One shot, a burst, or a bracket?",
+    "time": 12,
+    "definition": "Drive mode controls when and how many still photographs you record. Bracketing deliberately varies a setting across a group of images.",
+    "intro": "Choose timing for a moving subject, reduce shutter-press shake, and compare exposure choices without starting an editing workflow.",
+    "prerequisites": [
+      "auto-program",
+      "focus-area"
+    ],
+    "sections": [
+      [
+        "Find Drive Mode",
+        "Use MENU → Camera Settings1 → Drive Mode. Select a family, then use the wheel’s left/right sides for its variants. A burst is several captures while holding the shutter; a self-timer delays capture; a bracket varies exposure or rendering. These choices do not replace focus mode or shutter speed. Return to Single Shooting after an exercise to avoid unexpected sequences."
+      ],
+      [
+        "Single shots and short bursts",
+        "Single Shooting is the everyday one-picture choice. Cont. Shooting keeps taking pictures while you hold the shutter. Hi+ prioritizes maximum speed, but its display is not a real-time view of the subject. Hi, Mid and Lo offer a real-time view and can make following movement easier. Start with Mid and brief bursts of a walking subject. More frames use more card space and take longer to review; a burst cannot fix a shutter speed that is too slow."
+      ],
+      [
+        "Keep focus and brightness following",
+        "For a subject moving toward you, use Continuous AF (AF-C), a suitable focus area and MENU → Camera Settings1 → AEL w/ shutter → Auto or Off. AEL means automatic exposure lock; On can hold brightness at the half-press. Sony documents that at apertures beyond f/11, Hi+, Hi and Mid lock focus to the first frame. For this practice, try S, 1/500 and ISO AUTO in good light; confirm the aperture does not go beyond f/11, and review sharpness. AF-C release priority also affects whether the camera waits for focus. The <a href=\"#lesson/autofocus-controls\">autofocus troubleshooting lesson</a> explains it."
+      ],
+      [
+        "Timers: let the camera settle",
+        "Self-timer offers 2, 5 or 10 seconds before one picture. Use 2 seconds with stable support to reduce movement from pressing the shutter. Use 5 or 10 seconds to get into a photograph, with focus planned at the subject’s position. Self-timer(Cont) takes 3 or 5 frames after a 2-, 5- or 10-second delay—useful for choosing a group photo with fewer blinks. Press the shutter again or Drive Mode to stop a countdown; select Single Shooting to leave timer mode. A timer does not make a moving subject still."
+      ],
+      [
+        "Exposure brackets: several brightness choices",
+        "Cont. Bracket records an exposure sequence while you hold the shutter until it finishes. Single Bracket needs a press for each image and allows refocusing/reframing between shots. Select the spacing in EV (one EV is one stop) and frame count shown on the camera. Sony’s documented 0.3EV 3 Image example gives a base exposure and one 0.3 EV darker and lighter frame. Start there with a still scene; use wider spacing if the visible difference is too small. Exposure compensation offsets the whole sequence. These are separate files to inspect and choose from, not an automatically merged HDR photograph."
+      ],
+      [
+        "Bracket controls and dependencies",
+        "First select a bracket drive mode, then MENU → Camera Settings1 → Bracket Settings. Selftimer during Bracket offers OFF, 2 Sec, 5 Sec or 10 Sec; use this instead of replacing the bracket with the ordinary self-timer. Bracket order is 0→−→+ (base first) or −→0→+ (dark to bright) for exposure and white-balance brackets. Bracketing is unavailable in Intelligent Auto, Superior Auto, Scene Selection and Sweep Panorama. In M with Auto ISO it varies ISO; in M with a numeric ISO it varies shutter speed. With flash, Cont. Bracket also requires a separate press for each frame. Auto review shows the last frame, so inspect the full sequence in playback."
+      ],
+      [
+        "Other brackets are different experiments",
+        "WB bracket varies white balance—the color correction that makes a neutral object look neutral. It records three color variants: Lo makes smaller changes, Hi larger. DRO Bracket varies D-Range Optimizer, the camera’s adjustment of light/dark tones: Lo uses levels 1/2/3, Hi uses 1/3/5. Use JPEG for a simple comparison of these rendered looks. DRO is not an exposure bracket or a way to repair missed focus. Select the result you prefer; detailed processing and merging stay in a later phase."
+      ],
+      [
+        "When a drive choice is unavailable",
+        "Cont. Shooting is restricted by Sweep Panorama, Scene Selection other than Sports Action, Auto HDR, Multi Frame NR, Smile Shutter and certain Picture Effects. Flash slows bursts. Self-timer is unavailable with Sweep Panorama, Sports Action and Smile Shutter. Check the mode and processing options before assuming a fault. Silent Shooting can introduce stripes under flickering light or distort movement; start with Silent Shooting Off for this exercise, and do not assume turning off the sound improves action photos."
+      ]
+    ],
+    "exercise": "In good daylight, compare five deliberate single shots with two brief AF-C bursts of someone walking, with their agreement. Count sharp, well-timed keepers as a fraction of all captures. Then support the camera safely for a still scene and make a three-frame exposure bracket. Inspect every frame, choose one JPEG and note why. Return Drive Mode to Single Shooting.",
+    "question": "What is the normal difference between Cont. Bracket and Single Bracket without flash?",
+    "options": [
+      "Continuous holds the shutter through the sequence; Single needs a press for each frame",
+      "Single Bracket automatically merges the photos",
+      "Continuous bracketing automatically tracks focus in every mode"
+    ],
+    "answer": 0,
+    "explanation": "Drive controls sequence timing. Focus mode and other dependencies still matter, and an exposure bracket is a set of separate photographs.",
+    "sources": [
+      {
+        "label": "Drive Mode",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264679.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Cont. Shooting",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264680.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Self-timer",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241223.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Self-timer(Cont)",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241224.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Cont. Bracket",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241225.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Single Bracket",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264681.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "WB bracket",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264682.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "DRO Bracket",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241227.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Bracket Settings",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264684.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AEL w/ shutter",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241214.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Silent Shooting",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273510.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "D-Range Optimizer",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264688.html",
+        "checked": "2026-10-11"
+      }
+    ],
+    "category": "CAMERA CONTROLS",
+    "symbol": "◎",
+    "stage": "controls"
+  },
+  {
+    "id": "custom-controls",
+    "title": "Make the buttons work for you",
+    "time": 10,
+    "definition": "A custom key runs an assigned function. Fn holds quick shooting settings. My Menu holds shortcuts to full menu items.",
+    "intro": "Build a small, reversible shortcut setup so you can react before a good moment passes.",
+    "prerequisites": [
+      "first-day",
+      "eye-tracking",
+      "drive-bracketing"
+    ],
+    "sections": [
+      [
+        "Know which control you are touching",
+        "The top mode dial chooses Auto/P/A/S/M and other shooting modes. The top control dial changes the current exposure value or P shift. The rear wheel rotates and accepts directional presses; its center confirms choices. C1 is a custom button on top. C2 is the rear custom button used for Delete in playback. Fn opens shooting shortcuts and serves Send to Smartphone in playback. Button meanings depend on context; this lesson changes shooting controls only."
+      ],
+      [
+        "The AF/MF/AEL lever matters",
+        "The small lever selects which assignment the button inside it uses. In the ordinary arrangement, the AF/MF position temporarily swaps autofocus/manual focus while held, while AEL locks automatic exposure. Custom Key can change either assignment, so check the lever and your current mapping if the button behaves unexpectedly. A hold function lasts while you press; a toggle stays active until you press again. A focus hold freezes focus distance; exposure lock freezes exposure. They solve different problems."
+      ],
+      [
+        "Record first, then change one assignment",
+        "Write down the current button assignment in your notebook before changing it. MENU → Camera Settings2 → Custom Key has separate still-photo, movie and playback entries identified by icons. Choose the still-photo entry for these steps. Available functions depend on the chosen key; do not assume every button can run every function or that still assignments always work in movies. Not set can disable an easily bumped shortcut. This is a personal choice, not a recommended factory reset."
+      ],
+      [
+        "Try Sony’s AEL → Eye AF example",
+        "In the still Custom Key entry, use left/right to reach Rear1, choose AEL Button, press center, find Eye AF with the wheel directions, then press center. Set the lever to AEL. For a person, use Face/Eye AF Set. → Subject Detection → Human. Hold the reassigned button while shooting; if the eye is detected, the camera focuses on it. This replaces exposure lock at that lever position, so restore the recorded assignment if you prefer AEL. Eye detection can fail; inspect the recorded eye rather than trusting only the frame."
+      ],
+      [
+        "AF On is an optional separate focus trigger",
+        "The a6400 lets you assign AF On to a suitable custom key. It activates autofocus according to Focus Mode without needing a shutter half-press. First test the assigned key with AF w/ shutter still On. Only if you want separate focus and capture controls, set MENU → Camera Settings1 → AF w/ shutter → Off. Then use the assigned key to focus and the shutter to capture. Return AF w/ shutter to On to restore the beginner half-press workflow. Pre-AF may still adjust focus before either press; the next lesson covers that dependency."
+      ],
+      [
+        "Arrange Fn without losing your bearings",
+        "In shooting mode, use DISP to choose a view other than For viewfinder, then press Fn for the 12-function menu. Select with wheel directions; turn the wheel to change a setting and press center. Press center on an item to open its detailed screen. To replace a slot: MENU → Camera Settings2 → Function Menu Set. → choose the slot → choose its new function. Sony’s example replaces Drive Mode with Grid Line. For practice, record the old slot and try Grid Line in a slot you seldom use; retain quick access to Drive Mode if you use bursts. Full MENU paths still work if your Fn layout differs."
+      ],
+      [
+        "Build a small My Menu",
+        "MENU → My Menu → Add Item: select an item with the wheel directions, then choose its destination. Try Focus Area Limit, AF w/ shutter and Bracket Settings. These are suggestions for the present exercises; leave destructive Format out of your quick practice list. My Menu can hold up to 30 items, excluding Playback menu items and View on TV. Sort Item moves an entry to a chosen destination. It is a shortcut list, not a saved camera-settings preset."
+      ],
+      [
+        "Remove shortcuts, not photographs",
+        "Within My Menu, Delete Item removes the selected shortcut; Delete Page removes a page’s shortcuts; Delete All → OK clears the shortcut list. Those operations do not delete photographs or remove the original menu settings. Read the full path: Playback Delete and Setup Format have different consequences. Restore any experimental button/Fn mapping manually from your notes. To diagnose accidental changes, check mode dial, lever position, drive mode, exposure compensation and focus mode before resetting the camera."
+      ]
+    ],
+    "exercise": "Write down one existing shooting-button assignment and one Fn slot. Change and test one shortcut at a time. Add three useful items to My Menu, sort them, then delete one shortcut and verify the original menu item is still available. Photograph the same still subject before and after; the goal is quicker access, not a new image-processing effect. Restore any mapping you did not prefer.",
+    "question": "What does MENU → My Menu → Delete All remove?",
+    "options": [
+      "All photographs on the card",
+      "All shortcuts in My Menu",
+      "All autofocus settings from the camera"
+    ],
+    "answer": 1,
+    "explanation": "It clears My Menu’s shortcut list. It is different from deleting photos in Playback or formatting the card in Setup.",
+    "sources": [
+      {
+        "label": "Identifying parts",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280308.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF/MF/AEL switch lever",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273574.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Custom Key",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002279228.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF/MF control",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241202.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Hold",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273149.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF On",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241209.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF w/ shutter",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241208.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Fn and Function Menu Set.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241247.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "My Menu: Add Item",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278037.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "My Menu: Sort Item",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278038.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "My Menu: Delete Item",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278039.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "My Menu: Delete Page",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278040.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "My Menu: Delete All",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278041.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Face/Eye AF Set.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280329.html",
+        "checked": "2026-10-11"
+      }
+    ],
+    "category": "CAMERA CONTROLS",
+    "symbol": "◎",
+    "stage": "controls"
+  },
+  {
+    "id": "autofocus-controls",
+    "title": "Why autofocus behaves differently",
+    "time": 12,
+    "definition": "Autofocus depends on a chain: its trigger, focus mode, focus area, subject detection and release rules must work together.",
+    "intro": "Diagnose a missing focus area, unexpected refocusing, or a shutter that waits—one setting at a time.",
+    "prerequisites": [
+      "custom-controls",
+      "manual-focus"
+    ],
+    "sections": [
+      [
+        "Begin with a known still-photo setup",
+        "Choose P/A/S/M, Single Shooting, AF-S, Flexible Spot M, AF w/ shutter On and Pre-AF Off. Use a well-lit stationary object with a clear edge, far enough away for the lens to focus. These are diagnostic starting points. If the camera focuses on the intended detail but the photo is smeared, investigate camera shake or subject motion with the <a href=\"#lesson/shutter\">shutter-speed lesson</a>. Autofocus cannot freeze movement."
+      ],
+      [
+        "No focus on half-press—or focus without a press",
+        "If half-press does nothing, check Focus Mode is not MF and AF w/ shutter is On. A custom AF/MF toggle may also have changed the mode. If the lens refocuses before you press anything, check MENU → Camera Settings1 → Pre-AF. On adjusts focus in advance with an E-mount lens; Off makes the beginner workflow easier to observe. AF On is an assigned trigger, not a separate focus mode. Eye-Start AF is different from Eye AF: it starts AF when using the finder with specific LA-EA2/LA-EA4 A-mount adapter setups. It is not the eye-detection setting for your assumed native E-mount Sigma."
+      ],
+      [
+        "The shutter waits—or releases before focus",
+        "Priority Set in AF-S covers AF-S, DMF and stationary AF-A; Priority Set in AF-C applies to continuous AF with movement. AF waits for focus; Release permits capture even without confirmed focus; Balanced Emphasis balances the two. Start with AF for the still subject and Balanced Emphasis for the walking-subject experiment. If the shutter waits, seek a clearer edge, more light or more distance. Release priority may capture timing at the cost of out-of-focus images; it cannot repair focus."
+      ],
+      [
+        "A focus area disappeared, or jumps when you rotate",
+        "Focus Area Limit controls which area types appear in MENU and Fn; re-check a missing type and select OK. Removing a check can also change registered/orientation-dependent areas. Switch V/H AF Area can store different point positions, or positions and area types, for landscape and either portrait orientation. Set Off while learning one setup. Orientation switching does not happen during AF, bursts, half-press, timer countdown or magnification, among other restrictions. If a point wraps to the opposite edge, Circ. of Focus Point is set to Circulate."
+      ],
+      [
+        "Move or recall a focus point deliberately",
+        "Assign Focus Standard to a supported custom key such as the center button: in Zone/Flexible Spot/Expand Flexible Spot it lets the wheel directions move the frame; in Wide/Center it focuses at the center. AF Area Registration stores a reusable frame: turn it On, position the area, then hold Fn to register. Assign Regist. AF Area hold to recall while holding, or Regist AF Area tggle to toggle. Reg. AF Area+AF On also starts AF. Del. Regist. AF Area removes only the saved frame position. Registration locks Dial / Wheel Lock to Unlock; leave registration Off until you need predictable point recall."
+      ],
+      [
+        "Touch panel versus touch pad",
+        "Set MENU → Setup → Touch Operation → On. Touch Panel/Pad chooses monitor touch (panel), finder shooting touch (pad), or both. In Camera Settings2 → Func. of Touch Operation, Touch Focus positions focus; Touch Tracking follows a touched subject. In stills, half-press to focus, then fully press to capture. For Flexible Spot/Expand Flexible Spot, touch moves the frame. With other areas, Touch Focus sets a touched position. Cancel with the center button. Touch Pad Settings offers absolute positioning (touch maps to a location) or relative positioning (drag moves the point), plus active area and vertical-operation controls to reduce nose touches. Try Touch Panel Only first if finder use causes accidental moves."
+      ],
+      [
+        "Tracking and eye detection have different restrictions",
+        "Focus Area → Tracking requires AF-C and still shooting. Touch Tracking has its own rules and can also be used in supported movie modes. Both are disabled with Subject Detection Animal; use animal eye detection without tracking. Touch Tracking is also unavailable with MF, non-optical zoom, LA-EA2/LA-EA4, Sweep Panorama, Hand-held Twilight/Anti Motion Blur and 120p/100p movie recording. For a person, start with Human and Face/Eye Priority in AF On. Firmware 2.00 supports the face/eye instructions used here; your body version is confirmed, but this walkthrough has not been tested on your camera."
+      ],
+      [
+        "Magnification changes the AF tools available",
+        "Focus Magnifier enlarges the preview. AF in Focus Mag. On lets half-press autofocus in the enlarged area; Off makes half-press exit magnification. Magnified AF does not work with AF-C, mount adapters, movies, Sweep Panorama or certain AF-A combinations. While enlarged, eye AF, face/eye priority and Pre-AF are unavailable. Exposure and white balance cannot be adjusted there. Use AF-S on a supported still setup, or MF and the lens ring. Focus Magnif. Time offers 2 Sec, 5 Sec or No Limit; Initial Focus Mag. starts at x1.0 or x5.9 for stills. Peaking marks contrast edges and is only an aid—confirm actual detail at magnification."
+      ],
+      [
+        "Lights and frames are clues",
+        "AF Illuminator Auto can assist a dark stationary subject; it does not operate during AF-C, moving AF-A, movies, magnification, certain scenes or with a mount adapter. AF Area Auto Clear On hides the area after focus; Off leaves it visible. Disp. cont. AF area On shows in-focus areas for AF-C with Wide/Zone. A missing overlay is not proof that autofocus stopped. AF Micro Adj. is for specified A-mount lenses on LA-EA2/LA-EA4; do not use it to tune the native Sigma setup."
+      ],
+      [
+        "Still and movie controls are not interchangeable",
+        "AF drive speed (Fast/Normal/Slow) and AF Tracking Sens. (Responsive/Standard) in Camera Settings2 affect movies, not still-photo burst tracking. Movies support AF-C or MF, and this camera’s eye AF is unavailable during movie recording. Movie Initial Focus Mag. is x1.0/x4.0, separate from the still setting. These limits help explain greyed-out options; a full video course remains later. Use the <a href=\"#lesson/eye-tracking\">eye and tracking lesson</a> for the still-photo exercise, then the reference for a particular control."
+      ]
+    ],
+    "exercise": "With a still object, observe Pre-AF On then Off, restore Off, and compare AF-S priority AF versus Release without deliberately relying on an unfocused shot. Hide and restore one Focus Area Limit choice. Test Touch Panel Only, then deliberately try pad movement through the finder if useful. Record each result and any label mismatch. Finish with your usual half-press AF setup and five sharp, intentional single photographs.",
+    "question": "Your preferred focus-area type is missing from both MENU and Fn. What should you check?",
+    "options": [
+      "AF Micro Adj. for the native Sigma lens",
+      "Focus Area Limit, then the restrictions of your shooting/focus mode",
+      "JPEG Quality"
+    ],
+    "answer": 1,
+    "explanation": "Focus Area Limit hides unchecked types, and shooting/focus modes impose additional restrictions. AF Micro Adj. is for particular A-mount adapter combinations.",
+    "sources": [
+      {
+        "label": "AF w/ shutter",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241208.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF On",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241209.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Pre-AF",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264669.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Eye-Start AF",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241272.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Priority Set in AF-S",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264674.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Priority Set in AF-C",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264675.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Area Limit",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280328.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Switch V/H AF Area",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278024.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Circ. of Focus Point",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280338.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Standard",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273529.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF Area Registration",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278025.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Del. Regist. AF Area",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278026.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Touch Operation",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273547.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Touch Panel/Pad",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002279215.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Touch Pad Settings",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278967.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Touch Focus",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273548.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Touch Tracking",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280339.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Area",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264665.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Face/Eye AF Set.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280329.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Magnifier",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241206.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF in Focus Mag.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273545.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Magnif. Time",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241197.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Initial Focus Mag. (still)",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273478.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Peaking Setting",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002279214.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF Illuminator",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264670.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF Area Auto Clear",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273515.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Disp. cont. AF area",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264671.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF Micro Adj.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241204.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF drive speed",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273555.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF Tracking Sens.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273505.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Initial Focus Mag. (movie)",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280319.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Mode",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273481.html",
+        "checked": "2026-10-11"
+      }
+    ],
+    "category": "CAMERA CONTROLS",
+    "symbol": "◎",
+    "stage": "controls"
+  }
+]);
+Object.assign(window.FIELD_GUIDE.menuReference, {
+  "TP0002273567": {
+    "label": "Auto Mode",
+    "path": "MENU → Camera Settings1 → Auto Mode",
+    "meaning": "Selects which automatic scene-recognition mode the Auto dial position uses.",
+    "choices": [
+      "Intelligent Auto: recognizes a scene and sets most shooting controls automatically.",
+      "Superior Auto: can capture and combine several frames for a dark/backlit scene; recording can take longer."
+    ],
+    "start": "Use Intelligent Auto for a quick well-lit snapshot; try Superior Auto with a still JPEG scene.",
+    "limits": "Set the mode dial to Auto first. Most controls are automatic. Non-optical zoom prevents scene recognition. RAW/RAW & JPEG prevent Superior Auto composite creation; recognition may be wrong.",
+    "affects": "Still-photo capture and automatic processing; not a guarantee of image quality.",
+    "lesson": "auto-program",
+    "sources": [
+      {
+        "label": "Intelligent Auto",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241165.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Superior Auto",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273552.html",
+        "checked": "2026-10-11"
+      }
+    ]
+  },
+  "TP0002241276": {
+    "label": "Superior Auto Img. Extract.",
+    "path": "MENU → Camera Settings1 → Superior Auto Img. Extract.",
+    "meaning": "Decides whether Superior Auto keeps its selected result or the continuously captured images.",
+    "choices": [
+      "Auto: save one appropriate image selected by the camera.",
+      "Off: save all images in the sequence, subject to exceptions."
+    ],
+    "start": "Auto keeps the practice sequence simpler to review. Use Off only if you want the extra individual files.",
+    "limits": "Hand-held Twilight still saves one combined image with Off. Auto Framing can save two with Auto. RAW options limit the function; Silent Shooting On disables it. Off here does not disable Superior Auto.",
+    "affects": "Recorded still files and card use.",
+    "lesson": "auto-program",
+    "sources": [
+      {
+        "label": "Silent Shooting restrictions",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273510.html",
+        "checked": "2026-10-11"
+      }
+    ]
+  },
+  "TP0002264679": {
+    "label": "Drive Mode",
+    "path": "MENU → Camera Settings1 → Drive Mode",
+    "meaning": "Chooses single captures, repeated captures, delayed captures or a set of variants.",
+    "choices": [
+      "Single Shooting: one normal photograph per press.",
+      "Cont. Shooting: hold the shutter for a burst. Hi+ is fastest; Hi/Mid/Lo provide a real-time subject view.",
+      "Self-timer: one photo after 2, 5 or 10 seconds.",
+      "Self-timer(Cont): 3 or 5 photos after 2, 5 or 10 seconds.",
+      "Cont. Bracket: hold through an exposure sequence. Single Bracket: press separately for each image. Choose the displayed EV spacing and frame count; Sony documents 0.3EV 3 Image as an example, not the full option list.",
+      "WB bracket: three white-balance/color variants. Lo changes color less; Hi changes it more.",
+      "DRO Bracket: three tonal-rendering variants. Lo uses DRO levels 1/2/3; Hi uses 1/3/5."
+    ],
+    "start": "Single Shooting for a still cup; Mid with AF-C for short walking-subject bursts; a 2-second timer with stable support.",
+    "limits": "Sports Action disables Single Shooting. Continuous is unavailable in Sweep Panorama, scenes other than Sports Action, Auto HDR, Multi Frame NR, Smile Shutter and Picture Effects Soft Focus/HDR Painting/Rich-tone Mono./Miniature/Watercolor/Illustration. Timer is unavailable in Sweep Panorama, Sports Action and Smile Shutter. Exposure brackets require a mode other than Auto, Scene Selection or Sweep Panorama. For continuous focus/exposure use AF-C and AEL w/ shutter Auto/Off; beyond f/11 Hi+/Hi/Mid lock focus to the first frame. Hi+ lacks a live subject view; flash slows bursts and requires a press per bracket frame. In M, brackets vary Auto ISO or, with numeric ISO, shutter speed.",
+    "affects": "Still capture timing, file count and bracket variants. More files need more card space; bracketing does not merge an HDR image or correct missed focus.",
+    "lesson": "drive-bracketing",
+    "sources": [
+      {
+        "label": "Cont. Shooting",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264680.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Self-timer",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241223.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Self-timer(Cont)",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241224.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Cont. Bracket",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241225.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Single Bracket",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264681.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "WB bracket",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264682.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "DRO Bracket",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241227.html",
+        "checked": "2026-10-11"
+      }
+    ]
+  },
+  "TP0002264684": {
+    "label": "Bracket Settings",
+    "path": "MENU → Camera Settings1 → Bracket Settings",
+    "meaning": "Sets a bracket countdown and the order of exposure or white-balance variants.",
+    "choices": [
+      "Selftimer during Bracket: OFF takes no timed delay; 2 Sec, 5 Sec or 10 Sec delays capture.",
+      "Bracket order: 0→−→+ starts with the base result; −→0→+ runs darker to brighter (or the corresponding white-balance order)."
+    ],
+    "start": "For a supported still scene, choose a bracket Drive Mode first, then a 2-second bracket timer and 0→−→+.",
+    "limits": "Select a bracket drive mode before configuring it. The ordinary Self-timer replaces bracket drive mode; use Selftimer during Bracket instead. Bracket order applies to exposure and WB bracketing. Auto/Scene/Panorama restrictions still apply.",
+    "affects": "Timing/order of separate still files, not automatic merging.",
+    "lesson": "drive-bracketing"
+  },
+  "TP0002264687": {
+    "label": "ISO AUTO Min. SS",
+    "path": "MENU → Camera Settings1 → ISO Setting → ISO AUTO Min. SS",
+    "meaning": "Sets the shutter-speed threshold at which Auto ISO starts increasing sensitivity in P or A.",
+    "choices": [
+      "FASTER / FAST: raise ISO at faster shutter speeds than Standard; useful for motion, at the cost of higher ISO.",
+      "STD: camera chooses the threshold from lens focal length.",
+      "SLOW / SLOWER: allow slower shutter speeds before raising ISO; steadier subjects/support are needed.",
+      "Numeric shutter speed from 1/4000 to 30 seconds: choose a specific threshold. Adjacent named steps differ by 1 EV."
+    ],
+    "start": "Try 1/250 for a gently moving person, then check motion blur and choose faster when needed.",
+    "limits": "Requires P/A and ISO AUTO (including supported Multi Frame NR Auto ISO). If Auto ISO reaches its maximum, the camera can use a slower shutter. Flash can override the threshold; sync is limited to 1/160 second. S/M give direct shutter control.",
+    "affects": "Automatic exposure choices and the balance between motion blur and high-ISO noise.",
+    "lesson": "auto-program"
+  },
+  "TP0002280317": {
+    "label": "ISO Range Limit",
+    "path": "MENU → Camera Settings1 → ISO Setting → ISO Range Limit",
+    "meaning": "Limits which ISO values you can select manually.",
+    "choices": [
+      "Minimum: lowest manually selectable ISO.",
+      "Maximum: highest manually selectable ISO. Choose from the values available in the current shooting setup."
+    ],
+    "start": "Leave the range broad while learning. Use this if you repeatedly select unwanted numeric ISO values.",
+    "limits": "This is not the Auto ISO range. Set that via ISO → ISO AUTO → right side of wheel → ISO AUTO Minimum/Maximum. Picture Profile Gamma changes available ISO values. Reset these limits to restore hidden numeric choices.",
+    "affects": "Manual ISO selection availability; does not itself lock a shutter speed.",
+    "lesson": "auto-program"
+  },
+  "TP0002241214": {
+    "label": "AEL w/ shutter",
+    "path": "MENU → Camera Settings1 → AEL w/ shutter",
+    "meaning": "Decides whether half-pressing the shutter locks automatic exposure.",
+    "choices": [
+      "Auto: locks after AF-S focus; moving AF-A or burst shooting cancels the fixed exposure.",
+      "On: fixes exposure on half-press.",
+      "Off: does not lock exposure on half-press; exposure can keep adjusting in bursts."
+    ],
+    "start": "Auto for general use; Off for a moving subject when exposure should keep changing during the burst.",
+    "limits": "AEL-button operation takes priority. Exposure lock is different from focus lock and from AF w/ shutter. Sony recommends Auto or Off with AF-C for continuous focus/exposure.",
+    "affects": "Still-photo automatic exposure behavior.",
+    "lesson": "drive-bracketing"
+  },
+  "TP0002273510": {
+    "label": "Silent Shooting",
+    "path": "MENU → Camera Settings2 → Silent Shooting",
+    "meaning": "Uses silent still-photo capture, while lens and other operating sounds can remain.",
+    "choices": [
+      "On: capture without the normal shutter sound.",
+      "Off: disable Silent Shooting."
+    ],
+    "start": "Off for the first action/bracket exercise. Try On only when quiet capture is useful and inspect for banding or distorted movement.",
+    "limits": "Selectable only in P/A/S/M. On disables flash, Auto HDR, Picture Effect, Picture Profile, Long Exposure NR, e-Front Curtain Shutter, Superior Auto Img. Extract., BULB and Multi Frame NR. Moving subjects/camera can distort; flickering or instantaneous light can cause stripes. Very bright sources at low ISO can record dark tones. Focus/timer beeps are controlled separately by Audio signals. Startup capture availability is delayed by about 0.5 seconds.",
+    "affects": "Still capture method and possible image artifacts, not just speaker volume.",
+    "lesson": "drive-bracketing"
+  },
+  "TP0002279228": {
+    "label": "Custom Key",
+    "path": "MENU → Camera Settings2 → Custom Key",
+    "meaning": "Assigns a function to a button so you can call it without opening the full menu.",
+    "choices": [
+      "Still-photo, movie and playback Custom Key entries have separate icon-marked assignments.",
+      "Choose a supported button and a function from its list; availability varies by button. Not set disables its assigned shortcut.",
+      "AF/MF Button and AEL Button are separate assignments selected by the lever. C1, C2 and wheel buttons are also assignable; lens focus-hold assignment requires a lens with that button.",
+      "Examples: AEL Button → Eye AF; AF On for a separate AF trigger; Focus Hold to freeze focus; AF/MF hold/toggle to switch focusing method.",
+      "Movie Follow Custom (still icon) follows a still assignment only if supported in movies. Playback Follow Custom (shooting icons) switches to shooting and recalls the function."
+    ],
+    "start": "Record the existing AEL assignment, choose still Custom Key → Rear1 → AEL Button → Eye AF, set the lever to AEL, and test while holding it. Restore the old mapping if preferred.",
+    "limits": "Assignable functions are not identical for every key or mode; the on-camera list is authoritative for that key. Focus Standard and AF/MF Control Hold cannot be assigned to Left/Right/Down. Reassigning AEL replaces exposure lock in that lever position. No focus-hold button on the assumed Sigma lens is required for the body-button exercises.",
+    "affects": "Control mapping; changes how you access a function, not image quality by itself.",
+    "lesson": "custom-controls",
+    "sources": [
+      {
+        "label": "AF On",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241209.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Standard",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273529.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF/MF control",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241202.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Hold",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273149.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "AF/MF/AEL lever",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273574.html",
+        "checked": "2026-10-11"
+      }
+    ]
+  },
+  "TP0002241247": {
+    "label": "Function Menu Set. / Fn",
+    "path": "MENU → Camera Settings2 → Function Menu Set.; press Fn in shooting mode to use it",
+    "meaning": "Configures the 12 shortcuts opened by Fn during shooting.",
+    "choices": [
+      "Function Menu Set.: choose a slot, then replace its function with one from the offered list. Sony’s example replaces Drive Mode with Grid Line.",
+      "Fn while shooting: select a function with wheel directions, turn the wheel to choose its setting, and press center.",
+      "Center on a selected function opens its dedicated setting screen; some functions also use the top control dial for finer adjustment."
+    ],
+    "start": "Retain quick access to Drive Mode if you use bursts. Record one seldom-used slot and try Grid Line there, then restore it if not helpful.",
+    "limits": "Use DISP to select a screen other than For viewfinder for this walkthrough. In playback, Fn serves Send to Smartphone instead. A shortcut does not bypass the selected function’s mode restrictions. The source describes 12 slots, not a newer camera’s separate photo/movie Fn layouts.",
+    "affects": "Shooting shortcut layout; changing a setting through Fn has the same effect as through MENU.",
+    "lesson": "custom-controls"
+  },
+  "TP0002278037": {
+    "label": "Add Item",
+    "path": "MENU → My Menu → Add Item",
+    "meaning": "Adds a shortcut to a full menu item in My Menu.",
+    "choices": [
+      "Choose the menu item using wheel directions, then choose its destination. Up to 30 items can be registered."
+    ],
+    "start": "Try adding Focus Area Limit, AF w/ shutter and Bracket Settings for the current exercises.",
+    "limits": "Playback menu items and View on TV cannot be added. A shortcut does not bypass the original item’s mode restrictions.",
+    "affects": "My Menu organization only; no changes to recorded files.",
+    "lesson": "custom-controls"
+  },
+  "TP0002278038": {
+    "label": "Sort Item",
+    "path": "MENU → My Menu → Sort Item",
+    "meaning": "Moves an existing My Menu shortcut.",
+    "choices": [
+      "Choose an item with wheel directions, then choose its destination."
+    ],
+    "start": "Put the item you use most often first.",
+    "limits": "Requires an existing My Menu item. Moving it changes only the shortcut order.",
+    "affects": "My Menu organization only; no changes to recorded files.",
+    "lesson": "custom-controls"
+  },
+  "TP0002278039": {
+    "label": "Delete Item",
+    "path": "MENU → My Menu → Delete Item",
+    "meaning": "Removes one shortcut from My Menu.",
+    "choices": [
+      "Select the shortcut with wheel directions and press center to remove it."
+    ],
+    "start": "Remove a shortcut you no longer use; the original setting remains in its original menu.",
+    "limits": "This is My Menu deletion, not Playback Delete. It does not delete photos or reset the linked setting.",
+    "affects": "My Menu organization only; no changes to recorded files.",
+    "lesson": "custom-controls"
+  },
+  "TP0002278040": {
+    "label": "Delete Page",
+    "path": "MENU → My Menu → Delete Page",
+    "meaning": "Removes all shortcuts on one My Menu page.",
+    "choices": [
+      "Select the page with left/right and press center to remove its items."
+    ],
+    "start": "Use when you want to rebuild one page; record the shortcuts first if you may want them back.",
+    "limits": "Removes a page’s shortcuts only, not the original menu items, camera settings or photographs.",
+    "affects": "My Menu organization only; no changes to recorded files.",
+    "lesson": "custom-controls"
+  },
+  "TP0002278041": {
+    "label": "Delete All",
+    "path": "MENU → My Menu → Delete All",
+    "meaning": "Clears the entire My Menu shortcut list.",
+    "choices": [
+      "Select Delete All, then OK to clear the list; leave without confirming if you want to keep it."
+    ],
+    "start": "Use only when deliberately rebuilding My Menu. For one unwanted shortcut, use Delete Item.",
+    "limits": "Clears all My Menu shortcuts, not photographs or the linked settings. Setup Format and Playback Delete are different operations.",
+    "affects": "My Menu organization only; no changes to recorded files.",
+    "lesson": "custom-controls"
+  },
+  "TP0002264674": {
+    "label": "Priority Set in AF-S",
+    "path": "MENU → Camera Settings1 → Priority Set in AF-S",
+    "meaning": "Chooses the balance between confirmed focus and immediate shutter release.",
+    "choices": [
+      "AF: waits for focus before release.",
+      "Release: permits a shot even when focus has not been confirmed.",
+      "Balanced Emphasis: balances focus and release timing."
+    ],
+    "start": "AF for a stationary practice subject; inspect the actual photographs.",
+    "limits": "Applies to AF-S, DMF and AF-A when the subject is still. AF priority can delay a shot on a low-contrast or difficult subject. Release priority can record an unfocused image; it does not improve focusing.",
+    "affects": "Still-photo release timing and chance of an in-focus result.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002264675": {
+    "label": "Priority Set in AF-C",
+    "path": "MENU → Camera Settings1 → Priority Set in AF-C",
+    "meaning": "Chooses the balance between confirmed focus and immediate shutter release.",
+    "choices": [
+      "AF: waits for focus before release.",
+      "Release: permits a shot even when focus has not been confirmed.",
+      "Balanced Emphasis: balances focus and release timing."
+    ],
+    "start": "Balanced Emphasis for a walking-subject experiment; inspect the actual photographs.",
+    "limits": "Applies to continuous AF when the subject is moving. AF priority can delay a shot on a low-contrast or difficult subject. Release priority can record an unfocused image; it does not improve focusing.",
+    "affects": "Still-photo release timing and chance of an in-focus result.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002280328": {
+    "label": "Focus Area Limit",
+    "path": "MENU → Camera Settings1 → Focus Area Limit",
+    "meaning": "Hides focus-area types you do not want to cycle through.",
+    "choices": [
+      "Checked area types remain available; unchecked types disappear from both MENU and Fn. Select OK to apply.",
+      "An assigned Switch Focus Area key cycles through the allowed types."
+    ],
+    "start": "Keep all types available initially. Later retain just the areas you regularly use, such as Wide and Flexible Spot.",
+    "limits": "To recover a missing area, check it again. Removing a type registered in Switch V/H AF Area or AF Area Registration changes the registered settings. Mode restrictions still apply.",
+    "affects": "Available area choices, not image pixels or the sensor’s physical focusing coverage.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002278024": {
+    "label": "Switch V/H AF Area",
+    "path": "MENU → Camera Settings1 → Switch V/H AF Area",
+    "meaning": "Remembers focus-frame choices separately for horizontal and two vertical camera orientations.",
+    "choices": [
+      "Off: keep the same focus-area choice across orientations.",
+      "AF Point Only: switch frame position but keep the area type.",
+      "AF Point + AF Area: switch both position and type."
+    ],
+    "start": "Off while learning; later try AF Point Only to keep a portrait focus point near the face when rotating.",
+    "limits": "Changing this setting discards orientation-specific focus settings. Switching is suspended in Auto/Movie/S&Q, movie recording, half-press/active AF, bursts, timer countdown, digital zoom and magnification. On a vertical first shot after power-on the horizontal/last setting may be used. Orientation cannot be detected with the lens pointing up/down.",
+    "affects": "Focus-area selection for stills; does not rotate or crop the saved photograph.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002264670": {
+    "label": "AF Illuminator",
+    "path": "MENU → Camera Settings1 → AF Illuminator",
+    "meaning": "Supplies a focusing light in dark surroundings while acquiring focus.",
+    "choices": [
+      "Auto: illuminate automatically when needed.",
+      "Off: do not use the focusing light."
+    ],
+    "start": "Auto for a still indoor object; Off if the light distracts the subject, with enough ambient light for focusing.",
+    "limits": "Unavailable in Movie/S&Q, Sweep Panorama, AF-C, moving AF-A, Focus Magnifier, Landscape/Sports Action/Night Scene and with a mount adapter. A compatible flash with an AF illuminator can also supply light. Do not look directly at the lamp at close range.",
+    "affects": "Still autofocus assistance, not flash exposure or continuous lighting for the photo.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002264669": {
+    "label": "Pre-AF",
+    "path": "MENU → Camera Settings1 → Pre-AF",
+    "meaning": "Lets the camera adjust focus before you half-press the shutter.",
+    "choices": [
+      "On: focus in advance.",
+      "Off: no advance focus from this function."
+    ],
+    "start": "Off for the diagnostic exercise so you can observe when half-press or AF On starts focus.",
+    "limits": "Available only with an E-mount lens. The display can shake during focusing. AF w/ shutter Off alone does not disable Pre-AF; check both if you want only a separate AF trigger.",
+    "affects": "Still autofocus timing; no change to the meaning of AF-S/AF-C.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002241272": {
+    "label": "Eye-Start AF",
+    "path": "MENU → Camera Settings1 → Eye-Start AF",
+    "meaning": "Starts autofocus when you look into the electronic viewfinder with a supported A-mount adapter setup.",
+    "choices": [
+      "On: finder use starts AF on supported equipment.",
+      "Off: finder use does not start AF through this function."
+    ],
+    "start": "Not applicable to the assumed native E-mount Sigma setup; use Face/Eye AF Set. for eye detection.",
+    "limits": "Requires an A-mount lens with LA-EA2 or LA-EA4. The eye sensor trigger is different from focusing on the subject’s eye.",
+    "affects": "Still autofocus activation with specific adapted lenses.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002278025": {
+    "label": "AF Area Registration",
+    "path": "MENU → Camera Settings1 → AF Area Registration",
+    "meaning": "Saves a focus-frame position for quick recall with an assigned key.",
+    "choices": [
+      "On: enable registration; choose and position the area, then hold Fn to save it. A registered frame flashes.",
+      "Off: disable registration. Del. Regist. AF Area is the separate action for deleting the saved position.",
+      "Custom Key → Regist. AF Area hold: recall while held; Regist AF Area tggle: toggle recall; Reg. AF Area+AF On: recall and autofocus."
+    ],
+    "start": "Leave Off initially. For a predictable subject position, enable it, register the frame and test a supported custom key.",
+    "limits": "Cannot register in Movie/S&Q, during Touch Focus/Touch Tracking, digital zoom, active focusing or focus lock. Cannot recall in Auto/Movie/S&Q. Regist. AF Area hold cannot use Left/Right/Down buttons. On fixes Dial / Wheel Lock to Unlock. Focus Area Limit changes can alter the saved setting.",
+    "affects": "Stored still-photo focus-area position and button recall; not a saved focus distance or camera-settings preset.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002278026": {
+    "label": "Del. Regist. AF Area",
+    "path": "MENU → Camera Settings1 → Del. Regist. AF Area",
+    "meaning": "Deletes the frame position saved by AF Area Registration.",
+    "choices": [
+      "Run this action to remove the registered focus-frame position."
+    ],
+    "start": "Use when a saved position is no longer useful; record it first if you want to recreate it.",
+    "limits": "Affects the registered area, not photographs or the lens’s focusing calibration.",
+    "affects": "Stored focus-area recall only.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002273515": {
+    "label": "AF Area Auto Clear",
+    "path": "MENU → Camera Settings1 → AF Area Auto Clear",
+    "meaning": "Chooses whether the focus-area overlay stays visible after focus is achieved.",
+    "choices": [
+      "On: the area disappears shortly after focus.",
+      "Off: the area remains displayed."
+    ],
+    "start": "Off while learning so you can see which area you selected.",
+    "limits": "A disappearing overlay does not itself mean autofocus failed. This changes display behavior, not the chosen focus area.",
+    "affects": "Display only; no overlay is added to the photograph.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002264671": {
+    "label": "Disp. cont. AF area",
+    "path": "MENU → Camera Settings1 → Disp. cont. AF area",
+    "meaning": "Shows which area is in focus during continuous AF with Wide or Zone.",
+    "choices": [
+      "On: show the in-focus area.",
+      "Off: hide that area display."
+    ],
+    "start": "On for the AF-C burst exercise so you can observe the camera’s selection.",
+    "limits": "Applies to AF-C with Wide/Zone. With Center/Flexible Spot/Expand Flexible Spot, the in-focus frames turn green. An overlay is not a guarantee of sharp recorded detail.",
+    "affects": "Autofocus display feedback only.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002280338": {
+    "label": "Circ. of Focus Point",
+    "path": "MENU → Camera Settings1 → Circ. of Focus Point",
+    "meaning": "Chooses what happens when you move the focus frame beyond an edge.",
+    "choices": [
+      "Does Not Circulate: stop at the edge.",
+      "Circulate: jump to the opposite edge."
+    ],
+    "start": "Does Not Circulate while learning; Circulate if you frequently move between opposite sides.",
+    "limits": "Applies with Zone, Flexible Spot and Expand Flexible Spot. Unexpected wrapping may be this setting, not tracking a subject.",
+    "affects": "Focus-frame navigation only.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002241204": {
+    "label": "AF Micro Adj.",
+    "path": "MENU → Camera Settings1 → AF Micro Adj.",
+    "meaning": "Calibrates AF position for supported A-mount lenses using LA-EA2/LA-EA4 adapters.",
+    "choices": [
+      "AF Adjustment Set.: On enables adjustments.",
+      "amount: larger values shift focus farther away, smaller values nearer; ±0 is the neutral/no registered adjustment.",
+      "Clear: reset all registered lens adjustments."
+    ],
+    "start": "Do not use for the assumed native E-mount Sigma setup. Diagnose focus mode, area, subject distance and shutter speed instead.",
+    "limits": "Sony supports specified Sony/Minolta/Konica-Minolta A-mount lenses; unsupported-lens adjustment can affect supported-lens records. Stores up to 30 lenses; a dash means full. Setting an existing record to ±0 frees registration, or Clear removes all. Same-specification lenses cannot be adjusted independently. Incorrect adjustment can worsen focus.",
+    "affects": "Autofocus calibration records for specific adapted lenses; inapplicable to the current assumed lens.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002241206": {
+    "label": "Focus Magnifier",
+    "path": "MENU → Camera Settings1 → Focus Magnifier",
+    "meaning": "Enlarges the preview so you can inspect focus before capture.",
+    "choices": [
+      "Open Focus Magnifier; press wheel center to change enlargement and directions to move the area.",
+      "Delete button during this shooting view recenters the enlarged position. In MF, turn the focus ring to adjust.",
+      "With AF in Focus Mag. On, half-press performs AF; with Off, half-press exits. Full press captures and exits.",
+      "With Touch Operation and appropriate Panel/Pad enabled, MF double-tap can start magnification; dragging moves the area and double-tap again exits."
+    ],
+    "start": "Use with a stationary detail and stable support, checking actual texture rather than only peaking outlines.",
+    "limits": "AF in Focus Mag. imposes separate focus-mode restrictions. Initial Focus Mag. and Focus Magnif. Time set the initial view/duration. The Delete button has a different role in playback—always check the current screen.",
+    "affects": "Shooting preview only; it does not add pixels, crop the file or enlarge the saved subject.",
+    "lesson": "autofocus-controls",
+    "sources": [
+      {
+        "label": "AF in Focus Mag.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273545.html",
+        "checked": "2026-10-11"
+      }
+    ]
+  },
+  "TP0002241197": {
+    "label": "Focus Magnif. Time",
+    "path": "MENU → Camera Settings1 → Focus Magnif. Time",
+    "meaning": "Sets how long MF Assist or Focus Magnifier stays enlarged.",
+    "choices": [
+      "2 Sec: show for two seconds.",
+      "5 Sec: show for five seconds.",
+      "No Limit: stay enlarged until a shutter operation ends the view."
+    ],
+    "start": "5 Sec for quick checks; No Limit for a supported, carefully focused still life.",
+    "limits": "This controls magnification duration, not shutter time. AF in Focus Mag. changes what half-press does.",
+    "affects": "Shooting display only.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002273478": {
+    "label": "Initial Focus Mag. (still image)",
+    "path": "MENU → Camera Settings1 → Initial Focus Mag.",
+    "meaning": "Sets the first preview scale when opening Focus Magnifier for stills.",
+    "choices": [
+      "x1.0: begin with the normal view to place the magnification area.",
+      "x5.9: begin enlarged 5.9 times."
+    ],
+    "start": "x1.0 while learning to place the frame; x5.9 for quickly checking a known detail.",
+    "limits": "This is the still-image entry; the similarly named movie setting uses different scales.",
+    "affects": "Preview enlargement only, not recorded image size.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002273545": {
+    "label": "AF in Focus Mag.",
+    "path": "MENU → Camera Settings1 → AF in Focus Mag.",
+    "meaning": "Allows autofocus within an enlarged still-photo preview.",
+    "choices": [
+      "On: half-press focuses on the small central point of the enlarged area.",
+      "Off: half-press cancels magnification."
+    ],
+    "start": "On with AF-S and a well-lit static detail on stable support; magnify and position the area before half-pressing.",
+    "limits": "Unavailable in Sweep Panorama, movies, AF-C, with a mount adapter, AF-A outside P/A/S/M, or AF-A with Cont. Shooting. Edges may be hard to focus. While enlarged, exposure/white balance cannot be adjusted and Eye AF, Eye-Start AF, Pre-AF, Face/Eye Priority in AF and Auto Object Framing are unavailable.",
+    "affects": "AF behavior inside the enlarged display; no increase in captured resolution.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002279214": {
+    "label": "Peaking Setting",
+    "path": "MENU → Camera Settings1 → Peaking Setting",
+    "meaning": "Marks sharp-looking edges to assist manual focus or DMF.",
+    "choices": [
+      "Peaking Display: enable/disable the outlines.",
+      "Peaking Level: adjust edge enhancement strength.",
+      "Peaking Color: choose an outline color visible against the subject."
+    ],
+    "start": "Enable for a static MF exercise, choose a visible color/level on the camera, and confirm the detail with magnification.",
+    "limits": "Works during MF/DMF. Edge response varies with the subject and lens; peaking is not proof of perfect focus. Outlines are not shown on HDMI-connected devices. Sony’s source names these three controls but does not enumerate their level/color values.",
+    "affects": "Display assistance only; no outlines are burned into saved photos.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002273547": {
+    "label": "Touch Operation",
+    "path": "MENU → Setup → Touch Operation",
+    "meaning": "Enables or disables touch operation of the monitor.",
+    "choices": [
+      "On: allow supported touch operations.",
+      "Off: disable touch operations."
+    ],
+    "start": "On for touch focusing; Off if unwanted touches keep moving your focus point.",
+    "limits": "Touch Panel/Pad chooses monitor/finder contexts; Func. of Touch Operation chooses focus, tracking or shutter behavior. Enabling touch does not bypass those functions’ restrictions.",
+    "affects": "Touch input only; the selected touch function determines any focus/capture effect.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002279215": {
+    "label": "Touch Panel/Pad",
+    "path": "MENU → Setup → Touch Panel/Pad",
+    "meaning": "Selects when the monitor acts as a touch control.",
+    "choices": [
+      "Touch Panel+Pad: both monitor shooting and finder shooting.",
+      "Touch Panel Only: monitor shooting only.",
+      "Touch Pad Only: finder shooting only."
+    ],
+    "start": "Touch Panel Only if your face accidentally moves the focus point while using the finder.",
+    "limits": "Requires Touch Operation On for use. Touch Pad Settings further controls finder touch behavior.",
+    "affects": "Touch availability in shooting contexts.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002278967": {
+    "label": "Touch Pad Settings",
+    "path": "MENU → Setup → Touch Pad Settings",
+    "meaning": "Configures monitor touch input while you look through the finder.",
+    "choices": [
+      "Operation in Vertical Orientation: enable or disable touch-pad use during vertical finder shooting.",
+      "Touch Position Mode → Absolute Position: the touched location maps directly to a focus-frame location.",
+      "Touch Position Mode → Relative Position: dragging moves the frame by the direction and distance of the drag.",
+      "Operation Area: choose the active pad region shown on the camera to reduce accidental touches. With Absolute Position that region maps to the full frame."
+    ],
+    "start": "Try Relative Position and an active region comfortable for your thumb. Disable vertical operation if nose touches move the point.",
+    "limits": "Needs Touch Operation On and a Touch Panel/Pad choice that includes pad use. These are finder controls, not changes to the recorded image area. Sony’s text does not enumerate the region presets; choose using the on-camera diagram.",
+    "affects": "Focus-frame input during finder shooting.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002273548": {
+    "label": "Touch Focus",
+    "path": "MENU → Camera Settings2 → Func. of Touch Operation → Touch Focus",
+    "meaning": "Uses a monitor touch to select a focus position.",
+    "choices": [
+      "Select Touch Focus under Func. of Touch Operation; touch the subject, then half-press for still AF and press fully to capture.",
+      "With Flexible Spot/Expand Flexible Spot, touch moves the focus frame. With other areas it sets a touched focus position.",
+      "During supported movie monitor shooting, touching uses spot focus and temporarily switches to MF; cancel with the center button or the on-screen cancel control."
+    ],
+    "start": "Use Touch Operation On and Touch Panel Only to practise with a stationary object, then cancel with the wheel center.",
+    "limits": "Unavailable for touch autofocus in Sweep Panorama, MF, digital zoom or LA-EA2/LA-EA4. MF double-tap magnification is a different touch feature. Movie spot focus is not available through the finder.",
+    "affects": "Focus position/behavior in stills and movies; Touch Focus itself is not Touch Shutter.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002280339": {
+    "label": "Touch Tracking",
+    "path": "MENU → Camera Settings2 → Func. of Touch Operation → Touch Tracking",
+    "meaning": "Selects a subject to follow by touching the monitor.",
+    "choices": [
+      "Select Touch Tracking under Func. of Touch Operation; touch the subject to start, half-press to focus, fully press for a still photo.",
+      "Cancel using the wheel center or the on-screen cancel control."
+    ],
+    "start": "For a walking person, use Touch Operation On, Human subject detection and AF-C, then inspect the recorded focus.",
+    "limits": "Unavailable with MF, Animal detection, Smart/Clear Image/Digital Zoom, LA-EA2/LA-EA4, Sweep Panorama, Hand-held Twilight/Anti Motion Blur, or 120p/100p movie recording. Touch Tracking and Focus Area Tracking have different mode rules; do not assume all tracking is still-only.",
+    "affects": "Subject tracking in supported still/movie modes, not guaranteed eye detection.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002273555": {
+    "label": "AF drive speed (movie)",
+    "path": "MENU → Camera Settings2 → AF drive speed",
+    "meaning": "Sets how quickly movie autofocus changes focus.",
+    "choices": [
+      "Fast: faster transitions for active scenes.",
+      "Normal: ordinary transition speed.",
+      "Slow: smoother transitions between subjects."
+    ],
+    "start": "Normal when beginning movies; use still AF controls for the burst exercise.",
+    "limits": "Movie autofocus setting, not still-photo burst speed or still tracking sensitivity. The camera must be using autofocus for it to affect focusing.",
+    "affects": "Movie autofocus transitions only.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002273505": {
+    "label": "AF Tracking Sens. (movie)",
+    "path": "MENU → Camera Settings2 → AF Tracking Sens.",
+    "meaning": "Sets how readily movie autofocus responds to subject changes.",
+    "choices": [
+      "Responsive: higher sensitivity for quickly moving subjects.",
+      "Standard: ordinary sensitivity, useful around obstacles or crowds."
+    ],
+    "start": "Standard for a first movie experiment; this does not tune AF-C still bursts.",
+    "limits": "Movie autofocus setting. Do not confuse it with Focus Area Tracking or Touch Tracking.",
+    "affects": "Movie autofocus response only.",
+    "lesson": "autofocus-controls"
+  },
+  "TP0002280319": {
+    "label": "Initial Focus Mag. (movie)",
+    "path": "MENU → Camera Settings2 → Initial Focus Mag.",
+    "meaning": "Sets the first Focus Magnifier scale in movie shooting mode.",
+    "choices": [
+      "x1.0: normal shooting view.",
+      "x4.0: four-times enlarged preview."
+    ],
+    "start": "x1.0 to place the area before checking it closely.",
+    "limits": "Separate from Camera Settings1’s still-image Initial Focus Mag. AF in Focus Mag. is not available during movie shooting.",
+    "affects": "Movie shooting preview, not recorded resolution.",
+    "lesson": "autofocus-controls"
+  }
+});
+window.FIELD_GUIDE.glossary.push(...[
+  [
+    "Program shift",
+    "Changes the shutter/aperture pair in P while keeping the exposure target.",
+    "auto-program"
+  ],
+  [
+    "Drive mode",
+    "Chooses single, repeated, timed or bracketed still captures.",
+    "drive-bracketing"
+  ],
+  [
+    "Bracketing",
+    "Records a set of variants, such as darker and lighter exposures.",
+    "drive-bracketing"
+  ],
+  [
+    "Custom key",
+    "A button whose assigned function you can change.",
+    "custom-controls"
+  ],
+  [
+    "My Menu",
+    "A personal list of shortcuts to full menu items.",
+    "custom-controls"
+  ],
+  [
+    "Release priority",
+    "Allows capture without waiting for confirmed focus.",
+    "autofocus-controls"
+  ]
+]);
