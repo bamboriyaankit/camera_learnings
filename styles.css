@@ -10,3 +10,31 @@
 @media(max-width:580px){main{padding:25px 20px 38px}.topbar{padding:0 20px}.topbar>span:first-child{display:none}#search-form{width:100%}.hero{grid-template-columns:1fr;gap:28px;padding-bottom:25px}.hero h1{font-size:3.5rem}.hero-art{height:255px;border-radius:70px 70px 10px 10px}.hero-actions{margin-top:18px}.hero p{max-width:none}.stats{gap:7px;margin-bottom:27px}.stat{padding:12px 10px;gap:5px;flex-direction:column;align-items:flex-start}.stat strong{font-size:25px}.stat span{font-size:10px}.two-column,.card-grid,.guide-grid,.glossary{grid-template-columns:1fr}.resume-card{padding:23px}.section-head{align-items:flex-start}.section-head h2{font-size:22px}.section-head p{display:none}.lesson-row{padding:17px 14px;gap:12px}.lesson-row .row-end{flex-direction:column;align-items:flex-end;font-size:10px}.lesson-row .number{font-size:23px;min-width:26px}.lesson-row h3{font-size:15px}.lesson-row p{font-size:11px}.reading h1{font-size:2.7rem}.reading p{font-size:15px}.definition{padding:20px}.definition p{font-size:17px}footer{margin:0 20px;flex-wrap:wrap;gap:9px}footer span{width:100%;order:3}footer a{font-size:10px}.settings{font-size:11px}}
 @media(prefers-reduced-motion:no-preference){.button,.card,nav a{transition:background .15s,border-color .15s}.hero-art .sun{animation:sunrise 1s ease-out both}@keyframes sunrise{from{transform:translateY(14px);opacity:.4}to{transform:translateY(0);opacity:1}}}
 @media print{.sidebar,.topbar,footer,#notice,.actions,.reading-aside,.quiz,.lesson-note,.bookmark{display:none}.workspace{margin:0}main{padding:0}.reading-layout{display:block}.reading{max-width:none}.card,.exercise,.definition{break-inside:avoid}body{background:white}}
+
+/* Searchable camera reference and illustrative autofocus areas. */
+.menu-search { margin: 2rem 0 1rem; }
+.menu-search label { display: block; font-weight: 600; margin-bottom: .6rem; }
+.menu-search > div { display: flex; gap: .6rem; }
+.menu-search input { min-width: 0; flex: 1; border: 1px solid var(--line, #c9cdc2); border-radius: 8px; padding: .8rem; background: #fffef8; color: #243b32; font: inherit; }
+.menu-groups { display: flex; flex-wrap: wrap; gap: .6rem; }
+.menu-groups a { border: 1px solid #b6c0b4; border-radius: 24px; padding: .55rem .85rem; text-decoration: none; }
+.menu-groups a[aria-current] { background: #244f40; color: #fff; }
+.menu-section { border-top: 1px solid #c9cdc2; padding: 1rem 0; }
+.menu-section summary { cursor: pointer; font-size: 1.2rem; font-weight: 600; padding: .4rem 0; }
+.menu-section summary span { display: inline-block; font-size: .8rem; font-weight: 400; margin-left: .6rem; }
+.menu-section .lesson-list { margin-top: 1rem; }
+.menu-row h3, .menu-reading p, .menu-reading li { overflow-wrap: anywhere; }
+.menu-reading { max-width: 780px; }
+.menu-reading li { margin: .65rem 0; line-height: 1.7; }
+.prerequisites { font-size: .9rem; line-height: 1.8; }
+.focus-schematics { margin: 2rem 0; }
+.focus-examples { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; text-align: center; }
+.focus-scene { position: relative; aspect-ratio: 4/3; background: #e1e7d9; border: 1px solid #748878; margin-bottom: .6rem; overflow: hidden; }
+.focus-subject { position: absolute; width: 18%; height: 40%; top: 32%; left: 48%; background: #8b6944; border-radius: 40% 40% 12% 12%; }
+.focus-box { position: absolute; border: 2px solid #24543e; inset: 10%; }
+.area-1 .focus-box { inset: 20% 15% 15% 35%; }
+.area-2 .focus-box { inset: 35% 35% 42% 48%; }
+.focus-schematics figcaption { margin-top: .8rem; font-size: .85rem; line-height: 1.6; }
+@media (max-width: 560px) { .focus-examples { gap: .4rem; font-size: .8rem; } .menu-section summary span { display: block; margin: .5rem 0 0; } }
+/* Let lesson tables scroll within the reading column on narrow screens. */
+.reading { min-width: 0; }

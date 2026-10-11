@@ -5,9 +5,9 @@ Repository: https://github.com/bamboriyaankit/camera_learnings
 Site address: https://bamboriyaankit.github.io/camera_learnings/
 
 First Light is a free photography learning guide for a Sony a6400 and Sigma
-18–50mm lens. It contains eight foundations lessons, shooting guides, sharing
-advice, quizzes, and a notebook saved in your browser. The full camera menu
-reference, editing lessons, and private photo uploads remain planned.
+18–50mm lens. It contains fifteen lessons covering foundations and camera practice, shooting guides, sharing
+advice, quizzes, and a notebook saved in your browser. The camera reference indexes 201 Sony topics and explains 15 entries. The remaining
+menu explanations, editing lessons, and private photo uploads remain planned.
 
 ## Hosting
 
