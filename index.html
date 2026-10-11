@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3eb">
+  <meta name="description" content="A personal photography field guide. Learn aperture, shutter speed, ISO and your Sony a6400, one photograph at a time.">
+  <title>First Light — Your photography field guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <aside class="sidebar">
+    <a class="brand" href="#home" aria-label="First Light home"><span class="brand-mark" aria-hidden="true">✳</span><span>first light<span class="brand-sub">A PHOTOGRAPHY FIELD GUIDE</span></span></a>
+    <span class="nav-label">YOUR WORKSPACE</span>
+    <nav aria-label="Main navigation">
+      <a href="#home" data-nav="home"><span aria-hidden="true">⌂</span> Overview</a>
+      <a href="#learn" data-nav="learn"><span aria-hidden="true">▤</span> Learning path</a>
+      <a href="#guides" data-nav="guides"><span aria-hidden="true">◎</span> Shooting guides</a>
+      <a href="#share" data-nav="share"><span aria-hidden="true">↗</span> Share photos</a>
+      <a href="#practice" data-nav="practice"><span aria-hidden="true">↗</span> Practice</a>
+      <a href="#notebook" data-nav="notebook"><span aria-hidden="true">✎</span> My notebook</a>
+      <a href="#kit" data-nav="kit"><span aria-hidden="true">▣</span> My setup</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="kit-label"><span class="status-dot"></span> YOUR CAMERA</div><strong>Sony α6400</strong><p>Sigma 18–50mm</p><div class="mini-rule"></div><p>Start curious.<br>Learn by making photographs.</p></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span>Your personal learning space</span><form id="search-form" role="search"><label class="sr-only" for="search">Search lessons and guides</label><input id="search" name="q" type="search" placeholder="Search a concept…" maxlength="100"><button aria-label="Search" type="submit">⌕</button></form><span class="top-badge">BEGINNER → BEYOND</span></header>
+    <main id="main" tabindex="-1"></main>
+    <footer>FIRST LIGHT <span>One concept. One practice. One better photograph.</span><a href="#notebook">Manage saved progress</a></footer>
+  </div>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">Enable JavaScript to use the guide. You can also read <a href="beginner-foundations.md">the foundations draft</a>.</p></noscript>
+</body>
+</html>
