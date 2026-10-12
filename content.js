@@ -36,7 +36,7 @@ window.FIELD_GUIDE = {
       ['Choose the important part', 'For a portrait, the nearer eye is usually the priority. For an object, choose the detail that tells its story. The camera does not always know what you consider important.'],
       ['AF-S, AF-C, and AF-A', 'AF-S (Single-shot AF) locks focus when it finds a still subject. AF-C (Continuous AF) keeps adjusting while you hold the shutter halfway, making it a useful starting point for movement. AF-A (Automatic AF) switches between these behaviors based on whether the camera thinks the subject is moving; its availability depends on lens support.'],
       ['Manual focus and DMF', 'MF (Manual Focus) lets you adjust focus yourself with the lens focus ring. DMF uses autofocus first, then lets you fine-tune manually. Manual focus is different from M on the mode dial: M controls exposure, so you can use manual exposure with autofocus.'],
-      ['Find the setting on your a6400', 'For still photographs, open MENU → Camera Settings1 → Focus Mode. Choose the method that suits the subject. Sony lists only AF-C and MF for movies; some choices depend on the shooting mode and lens. Focus areas, eye detection, tracking, magnification, and peaking will get their own detailed guides.'],
+      ['Find the setting on your a6400', 'For still photographs, open MENU → Camera Settings1 → Focus Mode. Choose the method that suits the subject. Sony lists only AF-C and MF for movies; some choices depend on the shooting mode and lens. The camera-practice lessons and Camera reference explain focus areas, eye detection, tracking, magnification and peaking.'],
       ['Recognize the problem', 'If the background is sharp but the subject is not, focus may be misplaced. If the whole frame looks smeared, suspect camera movement. If only the moving subject is smeared, suspect shutter speed. More than one cause can happen at once.'],
       ['Watch the trade-off', 'A wide aperture can leave very little room for focus errors. A smaller aperture can help, but needs more light or another exposure adjustment. Moving closer also makes focus placement more demanding.']
     ], exercise: 'Arrange three objects at different distances. Focus on the middle one and photograph at a wide then smaller aperture. Inspect which objects look sharp, and note any shutter-speed change.', question: 'The background is sharp but the person is soft. What should you inspect?', options: ['The file name', 'Where the camera focused', 'The battery percentage'], answer: 1, explanation: 'Sharpness at the wrong distance suggests misplaced focus. Check for subject movement as well.', source: {label:'Sony a6400 Help Guide: Focus Mode',url:'https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273481.html',checked:'2026-10-11'} },
@@ -159,7 +159,7 @@ window.FIELD_GUIDE.lessons.push(...[
     "sections": [
       [
         "Before you start",
-        "Use your camera, attached lens, charged battery, and existing compatible memory card. These instructions use the English a6400 Help Guide. The assumed lens is the Sigma 18–50mm F2.8 DC DN Contemporary, Sony E mount; confirm the label on your lens. You reported body version 2.00 and lens version 03 on 2026-10-11. MENU → Setup → Version shows the camera software version. The current face/eye instructions below require version 2.00 or later; checking the version does not install an update."
+        "Use your camera, attached lens, charged battery, and existing compatible memory card. These instructions use the English a6400 Help Guide. You confirmed the Sigma 18–50mm F2.8 DC DN | Contemporary, Sony E mount, on 2026-10-11. You reported body version 2.00 and lens version 03 on 2026-10-11. MENU → Setup → Version shows the camera software version. The current face/eye instructions below require version 2.00 or later; checking the version does not install an update."
       ],
       [
         "1. Charge and handle the camera",
@@ -3171,7 +3171,7 @@ window.FIELD_GUIDE.lessons.push(...[
       ],
       [
         "No focus on half-press—or focus without a press",
-        "If half-press does nothing, check Focus Mode is not MF and AF w/ shutter is On. A custom AF/MF toggle may also have changed the mode. If the lens refocuses before you press anything, check MENU → Camera Settings1 → Pre-AF. On adjusts focus in advance with an E-mount lens; Off makes the beginner workflow easier to observe. AF On is an assigned trigger, not a separate focus mode. Eye-Start AF is different from Eye AF: it starts AF when using the finder with specific LA-EA2/LA-EA4 A-mount adapter setups. It is not the eye-detection setting for your assumed native E-mount Sigma."
+        "If half-press does nothing, check Focus Mode is not MF and AF w/ shutter is On. A custom AF/MF toggle may also have changed the mode. If the lens refocuses before you press anything, check MENU → Camera Settings1 → Pre-AF. On adjusts focus in advance with an E-mount lens; Off makes the beginner workflow easier to observe. AF On is an assigned trigger, not a separate focus mode. Eye-Start AF is different from Eye AF: it starts AF when using the finder with specific LA-EA2/LA-EA4 A-mount adapter setups. It is not the eye-detection setting for your confirmed native E-mount Sigma."
       ],
       [
         "The shutter waits—or releases before focus",
@@ -3563,7 +3563,7 @@ Object.assign(window.FIELD_GUIDE.menuReference, {
       "Movie Follow Custom (still icon) follows a still assignment only if supported in movies. Playback Follow Custom (shooting icons) switches to shooting and recalls the function."
     ],
     "start": "Record the existing AEL assignment, choose still Custom Key → Rear1 → AEL Button → Eye AF, set the lever to AEL, and test while holding it. Restore the old mapping if preferred.",
-    "limits": "Assignable functions are not identical for every key or mode; the on-camera list is authoritative for that key. Focus Standard and AF/MF Control Hold cannot be assigned to Left/Right/Down. Reassigning AEL replaces exposure lock in that lever position. No focus-hold button on the assumed Sigma lens is required for the body-button exercises.",
+    "limits": "Assignable functions are not identical for every key or mode; the on-camera list is authoritative for that key. Focus Standard and AF/MF Control Hold cannot be assigned to Left/Right/Down. Reassigning AEL replaces exposure lock in that lever position. No focus-hold button on the confirmed Sigma lens is required for the body-button exercises.",
     "affects": "Control mapping; changes how you access a function, not image quality by itself.",
     "lesson": "custom-controls",
     "sources": [
@@ -3757,7 +3757,7 @@ Object.assign(window.FIELD_GUIDE.menuReference, {
       "On: finder use starts AF on supported equipment.",
       "Off: finder use does not start AF through this function."
     ],
-    "start": "Not applicable to the assumed native E-mount Sigma setup; use Face/Eye AF Set. for eye detection.",
+    "start": "Not applicable to the confirmed native E-mount Sigma setup; use Face/Eye AF Set. for eye detection.",
     "limits": "Requires an A-mount lens with LA-EA2 or LA-EA4. The eye sensor trigger is different from focusing on the subject’s eye.",
     "affects": "Still autofocus activation with specific adapted lenses.",
     "lesson": "autofocus-controls"
@@ -3836,9 +3836,9 @@ Object.assign(window.FIELD_GUIDE.menuReference, {
       "amount: larger values shift focus farther away, smaller values nearer; ±0 is the neutral/no registered adjustment.",
       "Clear: reset all registered lens adjustments."
     ],
-    "start": "Do not use for the assumed native E-mount Sigma setup. Diagnose focus mode, area, subject distance and shutter speed instead.",
+    "start": "Do not use for the confirmed native E-mount Sigma setup. Diagnose focus mode, area, subject distance and shutter speed instead.",
     "limits": "Sony supports specified Sony/Minolta/Konica-Minolta A-mount lenses; unsupported-lens adjustment can affect supported-lens records. Stores up to 30 lenses; a dash means full. Setting an existing record to ±0 frees registration, or Clear removes all. Same-specification lenses cannot be adjusted independently. Incorrect adjustment can worsen focus.",
-    "affects": "Autofocus calibration records for specific adapted lenses; inapplicable to the current assumed lens.",
+    "affects": "Autofocus calibration records for specific adapted lenses; inapplicable to the confirmed lens.",
     "lesson": "autofocus-controls"
   },
   "TP0002241206": {
@@ -4059,3 +4059,730 @@ window.FIELD_GUIDE.glossary.push(...[
     "autofocus-controls"
   ]
 ]);
+
+// Capture fluency and composition/light increment, 2026-10-12.
+window.FIELD_GUIDE.lessons.push(...[
+  {
+    "id": "lens-fieldwork",
+    "title": "Know what your 18–50mm can do",
+    "time": 9,
+    "definition": "Your zoom changes the field of view. Camera position changes perspective, and the lens has a closest distance at which it can focus.",
+    "intro": "Use your confirmed Sigma lens for wider scenes, tighter portraits and close details without guessing its limits.",
+    "prerequisites": [
+      "focal-length",
+      "manual-focus"
+    ],
+    "sections": [
+      [
+        "Your exact lens is confirmed",
+        "You confirmed Sigma 18–50mm F2.8 DC DN | Contemporary for Sony E mount on 2026-10-11. Sigma identifies it as an APS-C mirrorless lens, matching the a6400’s APS-C sensor. DC names the sensor-format family; this lesson uses the Sony E version’s specifications. Lens firmware 03 and body firmware 2.00 were reported separately; those numbers do not describe focal length or aperture."
+      ],
+      [
+        "18mm, 35mm, 50mm: start with framing",
+        "From one position, 18mm includes more of the scene and 50mm frames a smaller part. Use the lens’s zoom ring to try 18, 35 and 50mm. On the a6400, 18–50mm gives approximately the same angle of view as 27–75mm on a 35mm-format camera; the lens remains physically 18–50mm. This comparison does not change its f-number or turn the camera into a different format."
+      ],
+      [
+        "A constant maximum aperture",
+        "F2.8 means f/2.8 is available as the widest aperture throughout this zoom range. It does not mean every photograph uses f/2.8. In A mode, try f/2.8 for separation, f/4 for more tolerance, and f/8 when more of the scene needs to look sharp. The camera adjusts shutter speed; watch it in dim light. Sigma lists f/22 as the smallest aperture, not as a recommended sharpness setting. Subject distance and the background also matter."
+      ],
+      [
+        "Closest focus is measured from the camera’s sensor",
+        "Sigma lists minimum focusing distance as 12.1 cm at the wide end (18mm) and 30 cm at the long end (50mm). Measure from the sensor-plane mark on the camera body, not from the front glass. The space between the front of the lens and the subject—working distance—is smaller. For a first attempt, stay comfortably farther away, then approach slowly while checking focus. Do not press the lens against an object."
+      ],
+      [
+        "Close-up does not mean unlimited magnification",
+        "At the wide end, Sigma lists maximum magnification 1:2.8; at the long end, 1:5. These ratios describe how large the subject’s image is on the sensor compared with the real object. Neither is 1:1 life-size macro. Macro scene mode cannot make the lens focus closer than its limit. Sigma instructs removing the hood when working at the wide end’s minimum distance; keep the glass protected and avoid blocking the light with the lens."
+      ],
+      [
+        "Two close-up approaches",
+        "Try a small object at 50mm from a comfortable distance, then at 18mm closer to it. Keep the important detail similarly sized in the frame. Compare the background and the relative sizes of nearer and farther details. Use AF-S on a clear edge, or magnified MF on stable support. If the lens hunts when you approach, move back before changing camera calibration settings."
+      ],
+      [
+        "Useful specifications, not a shopping list",
+        "For Sony E, Sigma lists a 55mm filter thread, 61.6 × 76.5mm diameter/length and 290g weight. Other mounts have different dimensions. You do not need a new filter or support to do this lesson. Support the camera carefully and inspect shutter speed; the a6400 SteadyShot menu is lens-dependent and is not a universal fix for blur with this lens. A faster shutter can help camera shake and subject motion; choose it based on the result."
+      ]
+    ],
+    "exercise": "Make a six-photo series: one scene at 18/35/50mm without moving, then one small object at comfortable distances using 18 and 50mm, followed by one improved version. Record where focus struggled and which framing you prefer. Compare real subject detail at the same viewing size, not only background blur.",
+    "question": "Where is the 12.1 cm minimum focusing distance measured from?",
+    "options": [
+      "The front of the lens hood",
+      "The sensor-plane mark on the camera body",
+      "The nearest edge of the camera strap"
+    ],
+    "answer": 1,
+    "explanation": "Focusing distance is measured from the sensor plane. Working distance from the front of the lens is smaller; start farther away and approach carefully.",
+    "sources": [
+      {
+        "label": "Sigma 18–50mm F2.8 DC DN | Contemporary: specifications and close focus",
+        "url": "https://www.sigma-global.com/en/lenses/c021_18_50_28/",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Sony: sensor-plane mark and minimum focus",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280308.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Sony a6400 specifications and angle-of-view equivalence",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280326.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Sony: Macro scene does not change minimum focus",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264644.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Sony: lens-dependent SteadyShot",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273522.html",
+        "checked": "2026-10-11"
+      }
+    ],
+    "stage": "controls",
+    "category": "CAMERA IN PRACTICE",
+    "symbol": "◒",
+    "sourceNote": "See the source dates below. Sony verifies camera operation, Sigma the lens, and Nikon general photographic principles where linked. Exercises and starting settings are original practice guidance, not guaranteed results. Physical-camera testing remains pending."
+  },
+  {
+    "id": "memory-scenes",
+    "title": "Save a setup, then know what comes back",
+    "time": 11,
+    "definition": "Memory stores shooting settings. Recall loads them. My Dial changes what a dial controls; Scene Selection lets the camera choose a scene-based setup.",
+    "intro": "Prepare for a repeatable situation while checking the settings that can surprise you after recall.",
+    "prerequisites": [
+      "custom-controls",
+      "exposure-controls"
+    ],
+    "sections": [
+      [
+        "Four shortcuts with different jobs",
+        "My Menu is a list of menu links. Memory stores a camera setup for later use. Reg. Custom Shoot Set temporarily recalls selected settings while you hold a button. My Dial changes the functions assigned to the dial and wheel. None of these names means saving a photo or backing up your card."
+      ],
+      [
+        "Register an ordinary still-subject setup",
+        "Choose A, an aperture such as f/4, ISO AUTO, AF-S and Single Shooting. Check each value first. MENU → Camera Settings1 → Memory (still/movie icons): choose an unused number and press the wheel center. Sony documents up to three body registrations and four card slots M1–M4; use the numbers shown on your camera. The registration screen shows which settings can be saved. Write down any existing preset before overwriting it. Program Shift cannot be stored."
+      ],
+      [
+        "Recall, inspect, then shoot",
+        "Turn the mode dial to MR. Use the wheel or left/right to select the saved number and press center; Camera Settings1 → Recall is the corresponding menu entry. Check the displayed exposure mode, shutter/aperture, ISO, focus and drive before shooting. Recalled values take priority over your previous settings. To update the saved setup, change the values and register again to the same number; do not assume a temporary adjustment has updated the preset. M1–M4 depend on the inserted card and are erased by formatting it."
+      ],
+      [
+        "A temporary action setup",
+        "For a sudden movement in P/A/S/M, Reg. Custom Shoot Set can hold a second setup ready. Choose Recall Custom hold 1, 2 or 3, check only the functions you want to recall, set their values (or Import Current Setting), then Register. Assign that Recall Custom hold number through the still-photo Custom Key entry. Hold the assigned key while shooting; release to return to the original setup. Exposure, focus and drive choices are supported, but self-timer is excluded. This is useful only after you understand the individual settings."
+      ],
+      [
+        "My Dial changes the controls",
+        "MENU → Camera Settings2 → My Dial Settings lets you assign dial/wheel functions to My Dial 1, 2 or 3, then OK. Sony’s example pairs the wheel with ISO and the top dial with Av (aperture). Assign My Dial 1 during Hold to a supported custom key to test it while held; release restores the normal control mapping. My Dial 1→2→3 cycles through sets; Toggle My Dial keeps a set active until pressed again. The values you changed are not automatically undone when the mapping returns. Empty sets are skipped, and My Dial temporarily overrides Dial / Wheel Lock."
+      ],
+      [
+        "Scene Selection is a different route",
+        "Turn the mode dial to SCN, then turn the top dial to choose a scene. Portrait, Sports Action, Macro, Landscape, Sunset, Night Scene, Hand-held Twilight, Night Portrait and Anti Motion Blur are available. They choose settings for their intended situations; they do not remove lighting or lens limits. Sports Action uses a held-shutter burst. Night Portrait needs the built-in flash raised manually. Night Scene/Night Portrait can use slow shutters, so use stable support."
+      ],
+      [
+        "Scene modes can change file handling",
+        "Hand-held Twilight and Anti Motion Blur make four captures and combine a result; selecting either with RAW or RAW & JPEG temporarily changes File Format to JPEG. They can struggle with erratic movement, very close subjects, repeated patterns or flickering light. Macro does not shorten minimum focusing distance. Use the reference for all scene choices. For a repeatable learning comparison, P/A/S/M gives clearer control over what you changed."
+      ],
+      [
+        "Undo the experiment deliberately",
+        "Leave MR or SCN for A/P to return to an ordinary mode and inspect the active values. Restore any custom-button assignment from your notes. A saved setup is a starting point for similar conditions, not a promise that the same settings work in different light. Keep the notebook record of what you saved; formatting the card is not a shortcut-cleanup method."
+      ]
+    ],
+    "exercise": "Record a spare Memory slot’s current contents, then save a still-subject setup only if overwriting it is acceptable. Change a few shooting values, recall your setup and compare every indicator before taking a test photo. Try one My Dial hold assignment and observe which mapping returns and which changed value remains. Restore unwanted changes.",
+    "question": "What happens when you release a My Dial “during Hold” button?",
+    "options": [
+      "Every exposure value returns to its previous value",
+      "The dial/wheel mappings return; values you changed may remain",
+      "The camera deletes the saved pictures"
+    ],
+    "answer": 1,
+    "explanation": "My Dial changes control assignments. It is different from Recall Custom hold, which temporarily recalls selected shooting settings.",
+    "sources": [
+      {
+        "label": "Memory",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241246.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Recall",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241175.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Reg. Custom Shoot Set",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002278035.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "My Dial Settings",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280322.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Scene Selection",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264644.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Format and card memories",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241321.html",
+        "checked": "2026-10-11"
+      }
+    ],
+    "stage": "controls",
+    "category": "CAMERA IN PRACTICE",
+    "symbol": "◒",
+    "sourceNote": "See the source dates below. Sony verifies camera operation, Sigma the lens, and Nikon general photographic principles where linked. Exercises and starting settings are original practice guidance, not guaranteed results. Physical-camera testing remains pending."
+  },
+  {
+    "id": "people-priority",
+    "title": "Choose the person and the moment",
+    "time": 8,
+    "definition": "Registered-face priority helps the camera prefer a known face. Smile Shutter releases automatically when it detects a smile.",
+    "intro": "Use these optional aids deliberately, then return to a simple eye-focus workflow when timing matters more.",
+    "prerequisites": [
+      "eye-tracking",
+      "autofocus-controls"
+    ],
+    "sections": [
+      [
+        "Ordinary eye AF does not require registration",
+        "For one person, start with Face/Eye Priority in AF On and Subject Detection Human. Use AF-C for movement or AF-S for a still pose, and check the recorded eye at enlarged size. Face Registration is an optional priority aid when several people are in the frame; it does not make an unrecognizable face sharp."
+      ],
+      [
+        "Register a willing subject",
+        "If useful, explain the exercise to your subject first. MENU → Camera Settings1 → Face Registration → New Registration. In good light, frame the face from the front within the guide, press the shutter, then choose Enter at confirmation. Up to eight faces can be registered. A mask, hat or sunglasses can interfere. This operation stores face-registration data in the camera; it is not a cloud upload."
+      ],
+      [
+        "Turn on the priority and set its order",
+        "Set MENU → Camera Settings1 → Regist. Faces Priority → On. It needs Face/Eye Priority in AF On and, on your firmware 2.00, Subject Detection Human. The face registered first has priority; Face Registration → Order Exchanging lets you select a face and move it to a new position. Off disables the preference while keeping registrations. Always inspect which face is actually selected."
+      ],
+      [
+        "Deletion has a surprising limit",
+        "Face Registration → Delete removes a selected registration from use, but Sony says its registered-face data remains in the product. Face Registration → Delete All removes all registered-face data. If the exercise is finished and you want that data removed, use Delete All only after checking that you also intend to remove any other registrations. These are face records, not the photographs on the card."
+      ],
+      [
+        "Smile Shutter can choose the timing for you",
+        "MENU → Camera Settings1 → Smile Shutter offers Off, On: Slight Smile, On: Normal Smile and On: Big Smile. The camera can take a photo when it detects the chosen smile strength. Try Normal Smile briefly with a willing subject, then turn it Off. You can press the shutter yourself while it is active; after the shot it returns to smile detection. It can miss an expression or mistake something else for a face."
+      ],
+      [
+        "Know when it is unavailable",
+        "Smile Shutter is unavailable during movies/S&Q, Sweep Panorama, Picture Effect, Focus Magnifier, and Landscape/Night Scene/Sunset/Hand-held Twilight/Anti Motion Blur scenes. It also changes the behavior of other controls: focus area is Wide and burst/timer choices are restricted. With Touch Tracking active, touching a face confines smile detection to that face. Check the mode first if an option is unavailable."
+      ],
+      [
+        "Choose the expression you actually want",
+        "A smile is only one expression. A quiet look, interaction or glance can make a more interesting picture. If automatic release fights your timing, use Smile Shutter Off, a deliberate focus area and short bursts or single shots. Compare the expression, eye sharpness and background—not just how many photos the camera captured."
+      ]
+    ],
+    "exercise": "With someone’s agreement, try ordinary Human eye AF first. If registration is useful, record a face, enable priority and test a second composition. Briefly try Smile Shutter, then turn it Off. Review the sharpness and expression in each result. Decide whether to keep registrations; remember that Delete All removes every registered-face record.",
+    "question": "Which action removes the registered-face data according to Sony?",
+    "options": [
+      "Face Registration → Delete All",
+      "Deleting one photograph from playback",
+      "Regist. Faces Priority → Off"
+    ],
+    "answer": 0,
+    "explanation": "Delete All removes all registered-face data. Delete for one face leaves its data in the camera, and priority Off only disables the preference.",
+    "sources": [
+      {
+        "label": "Face Registration: New Registration",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241259.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Face Registration: Order Exchanging",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241260.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Face Registration: Delete and retained data",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264704.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Regist. Faces Priority",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002279222.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Smile Shutter",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264703.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Focus Area restrictions",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264665.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Continuous shooting restrictions",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264680.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Self-timer restrictions",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241223.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Face/Eye AF Set.",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280329.html",
+        "checked": "2026-10-11"
+      }
+    ],
+    "stage": "controls",
+    "category": "CAMERA IN PRACTICE",
+    "symbol": "◒",
+    "sourceNote": "See the source dates below. Sony verifies camera operation, Sigma the lens, and Nikon general photographic principles where linked. Exercises and starting settings are original practice guidance, not guaranteed results. Physical-camera testing remains pending."
+  },
+  {
+    "id": "composition",
+    "title": "Build a frame around one idea",
+    "time": 9,
+    "definition": "Composition is how you arrange the subject, background and empty space inside the photograph.",
+    "intro": "Make the viewer notice what you noticed, using your feet, camera height and the 18–50mm zoom.",
+    "prerequisites": [
+      "lens-fieldwork"
+    ],
+    "sections": [
+      [
+        "Name the subject before changing settings",
+        "Choose one simple idea: a person’s expression, the shape of a cup, or a tree against the sky. Ask what the viewer should notice first. A technically sharp picture can still feel unclear if several bright or detailed objects compete for attention. This lesson is an experiment in visual choices, not a formula for what everyone must like."
+      ],
+      [
+        "Check the background and all four edges",
+        "Before shooting, scan behind the subject and around the frame. Look for a pole that appears to grow from a head, a bright patch pulling attention away, or a cut-off object at the edge. Move a step sideways, raise/lower the camera or wait for the background to clear. Use a safe position; do not step backward into a road or obstacle while looking through the finder."
+      ],
+      [
+        "Use thirds as a starting guide",
+        "MENU → Camera Settings2 → Grid Line → Rule of 3rds Grid divides the frame into nine rectangles. Try the subject near an intersection and compare a centered version. Give a person space in the direction they face if that supports your idea. A centered arrangement may be better for symmetry or a direct portrait. The grid is a composition aid, not a scoring system, and it does not appear in the recorded picture."
+      ],
+      [
+        "Separate moving from zooming",
+        "From one position, zoom to remove unwanted edges. Then deliberately change position and reframe. The second action changes the relationship of near and far objects. With the 18–50mm, try a wider environmental view first, then a tighter view that keeps only the key subject. If you get very close to a face, inspect the proportions before assuming the longest focal length is always the right answer."
+      ],
+      [
+        "Lines, layers and breathing space",
+        "A path or railing can lead the eye toward a subject; it can also lead away from it. Try a foreground element, main subject and distant background to suggest depth, keeping the important detail in focus. Empty space can make the subject easier to notice. Compare two versions and describe the change with concrete words such as “the bright sign is gone” instead of “this is more professional.”"
+      ],
+      [
+        "Level deliberately",
+        "For a horizon or architecture, enable Level in MENU → Camera Settings2 → DISP Button → Monitor or Finder, then Enter, and cycle DISP to that view. Sony notes a possible error of almost ±1° and larger errors at steep tilt, so use visible lines too. A tilted frame can be intentional, but a nearly-level horizon often looks accidental. Grid Line and Level help at capture; this is not an editing/crop lesson."
+      ],
+      [
+        "Review a small sequence",
+        "Compare centered, off-center and simplified-background versions at the same viewing size. First describe where your eye goes. Then check the intended subject’s focus and the frame edges. If your phone is available, make a similar framing from the same position and compare at the same size. Record a preference without treating one camera or one composition rule as an automatic winner."
+      ]
+    ],
+    "exercise": "Choose a stationary subject and make three pairs: centered/thirds, busy/cleaner background, and wide/tight framing. Change only the intended choice in each pair. Select one frame and write what you removed or arranged to make the idea clearer. The supplied diagram is only an illustration; your real photos are the evidence.",
+    "question": "What is the most useful response to a distracting object behind your subject?",
+    "options": [
+      "Always raise ISO",
+      "Try changing camera position or framing, then check the edges again",
+      "Always place every subject on a thirds intersection"
+    ],
+    "answer": 1,
+    "explanation": "Position and framing can remove the distraction. Thirds is an optional guide, not a rule that fixes every scene.",
+    "sources": [
+      {
+        "label": "Sony a6400 Grid Line",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264706.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Sony a6400 DISP and Level",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264659.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Sigma: 18–50mm zoom and angle of view",
+        "url": "https://www.sigma-global.com/en/lenses/c021_18_50_28/",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Nikon: 5 Easy Composition Guidelines (general composition, not Sony menus)",
+        "url": "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/5-easy-composition-guidelines",
+        "checked": "2026-10-12"
+      }
+    ],
+    "stage": "fieldcraft",
+    "category": "COMPOSITION & LIGHT",
+    "symbol": "◒",
+    "sourceNote": "See the source dates below. Sony verifies camera operation, Sigma the lens, and Nikon general photographic principles where linked. Exercises and starting settings are original practice guidance, not guaranteed results. Physical-camera testing remains pending."
+  },
+  {
+    "id": "available-light",
+    "title": "Find better light before changing gear",
+    "time": 11,
+    "definition": "Available light is the light already in the scene. Its direction, shadow pattern and color can change the feeling of a photograph.",
+    "intro": "Use a window or open shade to make a simple JPEG portrait or still life, then compare what moving the subject changes.",
+    "prerequisites": [
+      "composition",
+      "jpeg-settings",
+      "exposure-controls"
+    ],
+    "sections": [
+      [
+        "Start with one window and one subject",
+        "Place a cup or willing person near a window in daylight. Turn off nearby indoor lamps if you can do so comfortably, to simplify the mix of light colors. Use your existing camera and lens; no lighting purchase is required. Start in A around f/4 with ISO AUTO, AF-S for a still object or AF-C/Human eye AF for a moving person. These are starting points. Watch shutter speed and review sharpness before judging the light."
+      ],
+      [
+        "Observe direction and shadow edges",
+        "Make one picture with the window behind you, then one with it beside the subject. Look for where shadows fall and whether they reveal shape or hide a feature. Direct sun and light through a larger window or thin curtain can produce different shadow edges; photograph both when available and compare. “Soft” light means a more gradual light-to-shadow transition, not a blurred or less-sharp photograph. Choose the pattern that suits the subject."
+      ],
+      [
+        "Try open shade",
+        "Outside, try a shaded location facing a bright open area. Avoid patches of direct sunlight across the face for the first comparison. Move the subject or camera and watch the eyes and background. Shade can still be dim, and a bright background can make the subject look dark. Check the actual result instead of assuming outdoors always provides enough light or that shade is always best."
+      ],
+      [
+        "A bright background is an exposure choice",
+        "With the light behind the subject, the face and background may need very different exposures. In P/A/S or M with Auto ISO, try a small positive exposure-compensation adjustment if the face is too dark, then check whether important bright details are lost. Another option is to move the subject or change the background. A white wall or card you already have can be tried opposite the window to return some light; keep it stable and compare with/without. Not every bright reflection needs detail, but decide intentionally."
+      ],
+      [
+        "White balance changes the color interpretation",
+        "MENU → Camera Settings1 → White Balance → Auto is a useful starting point. For a window scene, compare Auto and Daylight; for shade, compare Auto and Shade. A preset is named for the light it compensates, not an artistic filter you must use in every matching location. If the look is too warm or cool, choose the version that represents your intention. In Auto/SCN shooting, White Balance is fixed to Auto; use P/A/S/M for this exercise. White balance affects the camera-rendered JPEG; it is not a focus adjustment."
+      ],
+      [
+        "Keep a sequence’s color consistent",
+        "Under warm lamps with White Balance Auto, Priority Set in AWB offers Standard, Ambience (retain more warm atmosphere) and White (prioritize neutral white at low color temperature). Compare them if that lighting is available. Shutter AWB Lock can hold color on half-press or during a burst; Off returns normal automatic adjustment. A lock is useful only while the light stays similar. Mixed sources can leave different parts of the subject different colors; moving or switching off one source can be more useful than repeatedly changing WB."
+      ],
+      [
+        "Read brightness aids without trusting them blindly",
+        "DISP Button can enable Histogram, a graph of how much of the preview is dark or bright. There is no ideal histogram shape for every scene; a bright wall naturally pushes it right. Check important bright texture in playback as well. Zebra Setting overlays stripes at a chosen brightness level; it is a threshold guide, not a universal skin-tone or RAW-clipping detector. Start by understanding the display before relying on it. With Live View Display → Setting Effect OFF, preview brightness can differ from the captured photo; Setting Effect ON is the useful baseline for this exercise."
+      ],
+      [
+        "Make a fair before-and-after",
+        "Keep framing, subject and viewing size similar while changing one light choice. Score eye/detail sharpness, expression/shape, important highlights, color and background. A preferred camera photograph comes from those visible results, not merely a wider aperture. Keep the original files; selecting the best JPEG is enough today. Editing, artificial-flash technique and cloud storage remain separate later work."
+      ]
+    ],
+    "exercise": "Make four pictures: front-window light, side-window light, one position with a simpler background, and that position with a tested white-balance choice. Keep the subject size similar and note exposure settings. Pick the best two at equal viewing size and explain the visible differences. If using a person, prioritize comfort over keeping them in harsh light.",
+    "question": "What does “soft light” describe?",
+    "options": [
+      "An out-of-focus subject",
+      "A gradual transition from lit areas to shadows",
+      "A low-resolution JPEG"
+    ],
+    "answer": 1,
+    "explanation": "Light softness describes shadow transitions. Focus, camera movement and shutter speed still determine whether the subject is sharp.",
+    "sources": [
+      {
+        "label": "White Balance",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264690.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Priority Set in AWB",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002273491.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Shutter AWB Lock",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280318.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "DISP and Histogram",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264659.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Zebra Setting",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002279220.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Live View Display",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241271.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Exposure compensation",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264676.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Human face/eye AF",
+        "url": "https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280329.html",
+        "checked": "2026-10-11"
+      },
+      {
+        "label": "Nikon: Photography Glossary (ambient light, soft lighting and reflectors)",
+        "url": "https://www.nikonusa.com/learn-and-explore/photography-glossary",
+        "checked": "2026-10-12"
+      }
+    ],
+    "stage": "fieldcraft",
+    "category": "COMPOSITION & LIGHT",
+    "symbol": "◒",
+    "sourceNote": "See the source dates below. Sony verifies camera operation, Sigma the lens, and Nikon general photographic principles where linked. Exercises and starting settings are original practice guidance, not guaranteed results. Physical-camera testing remains pending."
+  }
+]);
+Object.assign(window.FIELD_GUIDE.menuReference, {
+  "TP0002241246": {
+    "label": "Memory",
+    "path": "MENU → Camera Settings1 → Memory (still/movie icons)",
+    "meaning": "Stores selected shooting settings for later recall.",
+    "choices": [
+      "Choose one of the body registration numbers shown on the camera; Sony documents up to three body registrations.",
+      "M1–M4: four memory-card registrations; require an inserted card.",
+      "Set up the camera first, choose a destination and press center. Change and re-register to overwrite an existing setup."
+    ],
+    "start": "Use a spare slot for a repeatable still-subject setup, after recording anything already saved there.",
+    "limits": "The camera’s registration screen identifies the settings that can be saved. Program Shift cannot be registered. Overwriting replaces the stored setup; formatting the card erases M1–M4. This is not a photo backup.",
+    "affects": "Saved camera settings, not image files.",
+    "lesson": "memory-scenes"
+  },
+  "TP0002241175": {
+    "label": "Recall",
+    "path": "MENU → Camera Settings1 → Recall (still/movie icons); mode dial MR",
+    "meaning": "Loads a previously registered shooting setup.",
+    "choices": [
+      "Turn the mode dial to MR, select the number with the wheel or left/right, then press center.",
+      "Camera Settings1 → Recall also selects registered settings. M1–M4 use the inserted card; registrations from another camera of the same model can be recalled."
+    ],
+    "start": "Recall your still-subject setup, then inspect exposure, ISO, focus and drive indicators before the test photograph.",
+    "limits": "Requires a registered setup. Recalled settings take priority and can invalidate the settings you just chose. Card memories require the appropriate card. A temporary change is not a saved update; use Memory to re-register.",
+    "affects": "Active shooting settings and resulting capture behavior.",
+    "lesson": "memory-scenes"
+  },
+  "TP0002278035": {
+    "label": "Reg. Custom Shoot Set",
+    "path": "MENU → Camera Settings1 → Reg. Custom Shoot Set",
+    "meaning": "Registers selected shooting settings to recall temporarily while holding an assigned key.",
+    "choices": [
+      "Recall Custom hold 1/2/3: choose one registration, check the functions to recall, set values, then Register.",
+      "Import Current Setting: import the current camera setup into the selected registration.",
+      "Assign the matching Recall Custom hold number using still-photo Custom Key; hold while shooting and release to return."
+    ],
+    "start": "After learning the individual controls, prepare a faster-shutter/AF-C setup for occasional movement and test it before relying on it.",
+    "limits": "Recall Custom hold works only in P/A/S/M. The registerable functions are shown on the camera and include exposure/focus/drive, excluding self-timer. Lens and camera state can prevent saved settings taking effect. Record prior custom-button mappings before changing them.",
+    "affects": "Temporary shooting values, unlike My Dial’s control mappings.",
+    "lesson": "memory-scenes"
+  },
+  "TP0002280322": {
+    "label": "My Dial Settings",
+    "path": "MENU → Camera Settings2 → My Dial Settings",
+    "meaning": "Stores alternative functions for the top control dial and rear control wheel.",
+    "choices": [
+      "My Dial 1/2/3: assign each control a function, or -- (Not set), then OK.",
+      "Custom Key → My Dial 1/2/3 during Hold: use that mapping only while held.",
+      "My Dial 1→2→3: cycle normal → 1 → 2 → 3 → normal, skipping completely empty sets.",
+      "Toggle My Dial 1/2/3: press to activate; press again for normal controls."
+    ],
+    "start": "Try My Dial 1 with the wheel on ISO and dial on Av (aperture), using a during Hold button in A. Record the original button assignment first.",
+    "limits": "Available functions are listed on-camera. Empty sets are not recalled. Dial / Wheel Lock is temporarily overridden. Releasing a hold restores mappings, not necessarily the values you changed with them. This is not Memory recall.",
+    "affects": "Dial/wheel control assignments during supported still/movie shooting.",
+    "lesson": "memory-scenes"
+  },
+  "TP0002264644": {
+    "label": "Scene Selection",
+    "path": "Mode dial → SCN → turn the control dial to select the scene",
+    "meaning": "Chooses a scene-based automatic shooting setup.",
+    "choices": [
+      "Portrait: emphasizes the person and background separation.",
+      "Sports Action: aims for a fast shutter and takes a burst while the shutter is held.",
+      "Macro: a close-up scene setup, without changing the lens’s minimum focusing distance.",
+      "Landscape: a scene-wide sharpness and vivid-color setup.",
+      "Sunset: emphasizes sunset colors.",
+      "Night Scene: retains a night-scene look; slow shutter may need support.",
+      "Hand-held Twilight: four captures combined to reduce noise/blur in a night scene.",
+      "Night Portrait: a night portrait using flash; raise the flash manually and support for slow shutters.",
+      "Anti Motion Blur: four captures combined for an indoor scene without flash."
+    ],
+    "start": "Try Portrait or Landscape once and compare with the P/A setup you already understand.",
+    "limits": "Turn the dial to SCN, then turn the top control dial to choose a scene. Hand-held Twilight/Anti Motion Blur temporarily change RAW/RAW & JPEG to JPEG. Erratic movement, very close subjects, repeated patterns and flickering lights can defeat composite processing. Scene settings restrict other controls; no scene guarantees sharpness.",
+    "affects": "Still exposure/processing and, in composite modes, file handling.",
+    "lesson": "memory-scenes"
+  },
+  "TP0002241259": {
+    "label": "Face Registration: New Registration",
+    "path": "MENU → Camera Settings1 → Face Registration → New Registration",
+    "meaning": "Stores a face for optional focusing priority.",
+    "choices": [
+      "Frame the face in the guide, press the shutter, then Enter at confirmation. Up to eight faces can be registered."
+    ],
+    "start": "Use a willing subject, facing front in good light, when choosing between several familiar people is useful.",
+    "limits": "Obscuring hats/masks/sunglasses can prevent correct registration. Priority also requires Regist. Faces Priority On, Face/Eye Priority in AF On and Human detection on firmware 2.00+. Registration is not needed for ordinary eye AF.",
+    "affects": "Face-registration data in the camera and optional AF priority; not a cloud upload.",
+    "lesson": "people-priority"
+  },
+  "TP0002241260": {
+    "label": "Face Registration: Order Exchanging",
+    "path": "MENU → Camera Settings1 → Face Registration → Order Exchanging",
+    "meaning": "Changes the priority order of registered faces.",
+    "choices": [
+      "Select a registered face, then select its destination in the list. The first registered/listed face has higher priority."
+    ],
+    "start": "Move the intended main subject ahead of other registrations, then verify which face is selected in the scene.",
+    "limits": "Requires registrations and enabled registered-face priority to be useful. It does not guarantee that an obscured face can be detected.",
+    "affects": "Face-priority order, not photo order or image files.",
+    "lesson": "people-priority"
+  },
+  "TP0002264704": {
+    "label": "Face Registration: Delete",
+    "path": "MENU → Camera Settings1 → Face Registration → Delete (or Delete All)",
+    "meaning": "Removes one or all registered-face entries, with different data-retention effects.",
+    "choices": [
+      "Delete: remove a selected registration from use; Sony says its face data remains in the product.",
+      "Delete All: remove all registered-face data from the product."
+    ],
+    "start": "If removing face data after an exercise, use Delete All only after confirming all registrations may be removed.",
+    "limits": "Deleting an individual entry is not complete removal of its face data. Delete All affects every registered face. These operations are separate from Playback Delete and do not erase card photographs.",
+    "affects": "Face-registration records/data in the camera.",
+    "lesson": "people-priority"
+  },
+  "TP0002279222": {
+    "label": "Regist. Faces Priority",
+    "path": "MENU → Camera Settings1 → Regist. Faces Priority",
+    "meaning": "Gives higher focusing priority to registered human faces.",
+    "choices": [
+      "On: prefer registered faces.",
+      "Off: focus without extra registered-face preference; retain registrations."
+    ],
+    "start": "Off for a simple one-person eye-AF exercise; On when prioritizing a known person in a group is useful.",
+    "limits": "Requires Face Registration, Face/Eye Priority in AF On and Subject Detection Human on firmware 2.00 or later. It cannot reliably prioritize a face that is not detected.",
+    "affects": "Autofocus preference; not an eye-sharpness guarantee.",
+    "lesson": "people-priority"
+  },
+  "TP0002264703": {
+    "label": "Smile Shutter",
+    "path": "MENU → Camera Settings1 → Smile Shutter",
+    "meaning": "Automatically releases the shutter when it detects a smile.",
+    "choices": [
+      "Off: no smile-triggered capture.",
+      "On: Slight Smile / Normal Smile / Big Smile: select the smile strength used for release."
+    ],
+    "start": "Off for deliberate expression/timing. Briefly try Normal Smile with a willing subject, then restore Off.",
+    "limits": "Unavailable in movies/S&Q, Sweep Panorama, Picture Effect, Focus Magnifier, and Landscape/Night Scene/Sunset/Hand-held Twilight/Anti Motion Blur scenes. Up to eight faces can be detected but detection may fail or mistake other objects. A manual shot returns to active smile detection. With Touch Tracking, a touched face becomes the smile target. Focus-area and drive restrictions also apply.",
+    "affects": "Automatic still-photo timing and file creation; turn Off when the experiment ends.",
+    "lesson": "people-priority"
+  },
+  "TP0002264706": {
+    "label": "Grid Line",
+    "path": "MENU → Camera Settings2 → Grid Line",
+    "meaning": "Overlays composition guides on the shooting display.",
+    "choices": [
+      "Rule of 3rds Grid: divides the picture into thirds; try the subject near a line/intersection.",
+      "Square Grid: helps align horizontal/vertical elements.",
+      "Diag. + Square Grid: adds diagonal composition guides.",
+      "Off: hide the grid."
+    ],
+    "start": "Try Rule of 3rds Grid, then compare a centered composition; choose the arrangement that supports the subject.",
+    "limits": "An optional guide, not a rule for every scene. It does not change focus, exposure or the saved composition.",
+    "affects": "Shooting display only; no grid in the recorded photograph.",
+    "lesson": "composition"
+  },
+  "TP0002264659": {
+    "label": "DISP Button (Monitor/Finder)",
+    "path": "MENU → Camera Settings2 → DISP Button → Monitor or Finder → select views → Enter",
+    "meaning": "Chooses the shooting display views available when cycling DISP.",
+    "choices": [
+      "Choose Monitor or Finder, check the desired views, then Enter.",
+      "Graphic Display: basic information with graphical shutter/aperture indicators.",
+      "Display All Info.: recording information. No Disp. Info.: hide it.",
+      "Histogram: brightness distribution graph.",
+      "Level: front-back and horizontal tilt indicators; green indicates level.",
+      "For viewfinder (Monitor only): shooting information without the subject view.",
+      "Monitor Off (Monitor only): monitor off during shooting; still usable for playback and MENU."
+    ],
+    "start": "Enable Histogram and Level alongside a normal information view, then press DISP to compare them.",
+    "limits": "Monitor and Finder lists differ. The level can err by almost ±1° and more with steep tilt. A histogram has no ideal universal shape and does not tell you what the subject should look like.",
+    "affects": "Shooting display choices only.",
+    "lesson": "composition"
+  },
+  "TP0002264690": {
+    "label": "White Balance",
+    "path": "MENU → Camera Settings1 → White Balance",
+    "meaning": "Adjusts the interpretation of color under the light falling on the subject.",
+    "choices": [
+      "Auto: camera estimates the light color.",
+      "Daylight / Shade / Cloudy: daylight-family presets.",
+      "Incandescent: warm-lamp preset. Fluor.: Warm White / Cool White / Day White / Daylight: fluorescent presets.",
+      "Flash: flash preset. Underwater Auto: automatic underwater color adjustment.",
+      "C.Temp./Filter: color temperature and color-compensation adjustment.",
+      "Custom 1/2/3: stored measured-white settings. Press right for fine adjustment where supported."
+    ],
+    "start": "Auto for the first window-light photograph; compare Daylight or Shade in P/A/S/M for a consistent intended look.",
+    "limits": "Fixed to Auto in Intelligent Auto, Superior Auto and Scene Selection. Some lamp spectra, such as mercury/sodium, prevent accurate correction. Mixed light can affect different parts of the subject differently. A custom measurement needs the separate Sony measurement procedure; no unsupported temperature range is asserted here.",
+    "affects": "Camera-rendered JPEG/movie color and the initial interpretation of RAW; not focus or the physical color of the light.",
+    "lesson": "available-light"
+  },
+  "TP0002273491": {
+    "label": "Priority Set in AWB",
+    "path": "MENU → Camera Settings1 → Priority Set in AWB",
+    "meaning": "Chooses which color tendency automatic white balance should prioritize under warm lighting.",
+    "choices": [
+      "Standard: ordinary automatic adjustment.",
+      "Ambience: retain the light source’s warm atmosphere.",
+      "White: prioritize neutral whites with low-color-temperature light."
+    ],
+    "start": "Standard first; compare Ambience and White under a warm lamp and choose intentionally.",
+    "limits": "Applies when White Balance is Auto. It does not replace the light source or guarantee identical skin tones in mixed light.",
+    "affects": "Automatic color rendering preference.",
+    "lesson": "available-light"
+  },
+  "TP0002280318": {
+    "label": "Shutter AWB Lock",
+    "path": "MENU → Camera Settings1 → Shutter AWB Lock",
+    "meaning": "Holds automatic white balance during half-press or a burst.",
+    "choices": [
+      "Shut. Halfway Down: lock while half-pressed and during continuous shooting.",
+      "Cont. Shooting: keep the first frame’s white balance through the burst.",
+      "Off: ordinary automatic adjustment.",
+      "Separate custom-key AWB Lock Hold locks while held; AWB Lock Toggle locks until pressed again. These can also be assigned for movies."
+    ],
+    "start": "Off for changing light; try Cont. Shooting for a consistent burst under steady light.",
+    "limits": "Shutter AWB Lock applies to stills with White Balance Auto or Underwater Auto. A lock made before flash fires can give unnatural color; Sony advises appropriate Off/Cont. Shooting behavior without key lock, or White Balance Flash. Unlock when the lighting changes.",
+    "affects": "Still automatic white-balance timing; separate from exposure/focus lock.",
+    "lesson": "available-light"
+  },
+  "TP0002279220": {
+    "label": "Zebra Setting",
+    "path": "MENU → Camera Settings2 → Zebra Setting",
+    "meaning": "Overlays stripes where the preview brightness meets a selected threshold or range.",
+    "choices": [
+      "Zebra Display: show/hide stripes.",
+      "Zebra Level: choose the brightness criterion, expressed in IRE (a video-signal brightness scale).",
+      "Custom1 supports a standard brightness and range for checking an exposure band; Custom2 supports a minimum brightness for checking areas at/above it. These are Sony’s documented default custom roles."
+    ],
+    "start": "Learn the histogram and playback checks first; then experiment with stripes on a bright textured object while making small exposure changes.",
+    "limits": "Sony’s page does not enumerate every numeric level. Select a level according to the purpose; there is no universal skin-tone setting or promise of exact RAW clipping detection. Zebra is not shown on HDMI devices.",
+    "affects": "Brightness feedback overlay only; not added to captured photographs.",
+    "lesson": "available-light"
+  },
+  "TP0002241271": {
+    "label": "Live View Display",
+    "path": "MENU → Camera Settings2 → Live View Display",
+    "meaning": "Chooses whether the preview reflects exposure/color/effect settings.",
+    "choices": [
+      "Setting Effect ON: preview approximates the image with exposure compensation, white balance, Creative Style and Picture Effect applied.",
+      "Setting Effect OFF: prioritize a viewable composition preview even when the capture settings would look darker or different."
+    ],
+    "start": "Setting Effect ON for the window-light JPEG exercise; still inspect the recorded photo.",
+    "limits": "OFF cannot be selected in Intelligent Auto, Superior Auto, Sweep Panorama, Movie, S&Q or Scene Selection. With OFF, the displayed brightness need not match the shot. Sony mentions OFF for composition with third-party studio flash; flash technique is a later lesson.",
+    "affects": "Shooting preview, not a change to recorded exposure by itself.",
+    "lesson": "available-light"
+  }
+});
+window.FIELD_GUIDE.glossary.push(...[
+  [
+    "Composition",
+    "How you arrange the subject, background and space inside the frame.",
+    "composition"
+  ],
+  [
+    "Working distance",
+    "The space between the front of the lens and the subject.",
+    "lens-fieldwork"
+  ],
+  [
+    "Memory recall",
+    "Loading a previously registered shooting setup.",
+    "memory-scenes"
+  ],
+  [
+    "Soft light",
+    "Light with gradual transitions between illuminated areas and shadows.",
+    "available-light"
+  ]
+]);
+window.FIELD_GUIDE.glossary.find(term => term[0] === 'White balance')[2] = 'available-light';window.FIELD_GUIDE.glossary.find(term => term[0] === 'Histogram')[2] = 'available-light';

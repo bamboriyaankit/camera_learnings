@@ -38,3 +38,11 @@
 @media (max-width: 560px) { .focus-examples { gap: .4rem; font-size: .8rem; } .menu-section summary span { display: block; margin: .5rem 0 0; } }
 /* Let lesson tables scroll within the reading column on narrow screens. */
 .reading { min-width: 0; }
+.composition-demo { margin: 2rem 0; }
+.composition-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.composition-examples p { font-size: .85rem; margin-top: .4rem; }
+.composition-scene { position: relative; aspect-ratio: 3/2; overflow: hidden; border: 1px solid #748878; margin-bottom: .75rem; background: linear-gradient(0deg, #bac7a8 0 32%, #e9eadc 32%); }
+.composition-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 32.8%, #365b4380 33%, #365b4380 33.4%, transparent 33.6%, transparent 66%, #365b4380 66.2%, #365b4380 66.6%, transparent 66.8%), linear-gradient(0deg, transparent 32.8%, #365b4380 33%, #365b4380 33.4%, transparent 33.6%, transparent 66%, #365b4380 66.2%, #365b4380 66.6%, transparent 66.8%); }
+.composition-subject { position: absolute; background: #876044; width: 17%; height: 41%; bottom: 21%; left: 41.5%; border-radius: 40% 40% 12% 12%; }
+.thirds .composition-subject { left: 25%; }
+.composition-demo figcaption { font-size: .85rem; line-height: 1.6; }

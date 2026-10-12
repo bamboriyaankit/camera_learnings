@@ -2,7 +2,7 @@
 
 Status: first teaching draft, 2026-10-11. This conceptual draft is retained alongside the published learning website and is not fully source-reviewed. See `research.md` for verified camera instructions and remaining equipment claims.
 
-Implementation note: `content.js` includes eight foundations lessons based on this draft plus eleven camera-practice/controls lessons (19 total in the current release). The capture curriculum includes first-day setup, practical focus/exposure walkthroughs, JPEG settings, a phone-comparison assignment, Auto/P, drive/bracketing, custom controls and autofocus dependencies. See `research.md` for the specific verified Sony menu paths and `camera-reference-plan.md` for the 201-topic inventory and remaining reference work (56 entries explained; 145 source-only). The Share photos section explains free transfer, album, and download-link workflows.
+Implementation note: `content.js` includes eight foundations lessons based on this draft plus fourteen camera-practice/controls lessons and two Composition & Light lessons (24 total in the current release). The capture curriculum includes first-day setup, practical focus/exposure walkthroughs, JPEG settings, a phone-comparison assignment, Auto/P, drive/bracketing, custom controls and autofocus dependencies. See `research.md` for the specific verified Sony menu paths and `camera-reference-plan.md` for the 201-topic inventory and remaining reference work (73 entries explained; 128 source-only). The Share photos section explains free transfer, album, and download-link workflows.
 
 ## How we will learn
 
