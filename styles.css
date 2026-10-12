@@ -47,3 +47,5 @@
 .thirds .composition-subject { left: 25%; }
 .composition-demo figcaption { font-size: .85rem; line-height: 1.6; }
 .practice-assignments{margin-bottom:36px}
+.lesson-words{margin:24px 0}.lesson-words dt{font-weight:700;margin-top:12px}.lesson-words dd{margin:4px 0 12px;line-height:1.7}
+.setup-visual{margin:28px 0}.setup-panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.setup-panel{margin:0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--card)}.setup-panel h3{font-size:18px;line-height:1.4}.setup-panel svg{display:block;width:100%;height:auto}.setup-panel svg text{font:14px system-ui,sans-serif;fill:#243b32}.setup-panel figcaption{font-size:14px;line-height:1.7;color:#4c594e}.diagram-defs{position:absolute;overflow:hidden}.quick-start{background:#e7ebdc;padding:20px 24px;border-radius:10px;margin:24px 0}.reading .quick-start h2{margin-top:0}.quick-start li{margin:12px 0;line-height:1.8}.quick-start ol{padding-left:22px}@media(max-width:580px){.setup-panels{grid-template-columns:minmax(0,1fr)}.setup-panel{padding:12px}}

@@ -5083,3 +5083,63 @@ window.FIELD_GUIDE.glossary.find(term => term[0] === 'White balance')[2] = 'avai
     });
   }));
 })();
+
+// Plain-language review: preserve lesson IDs and all saved notebook data.
+(() => {
+  const data=window.FIELD_GUIDE;
+  const lesson=id=>data.lessons.find(item=>item.id===id);
+  const definitions={
+    iso:'ISO changes how bright the camera makes the image from the light it recorded. Raising ISO can help in dim light, but does not let more light into the camera.',
+    focus:'Focus makes the part you choose look sharp, such as an eye or the lettering on a cup. Depth of field means how much in front of and behind that part also looks sharp.',
+    'focal-length':'The numbers on your zoom ring describe focal length. At 18mm you see more of the scene. At 50mm you see a smaller part, shown larger in the picture.',
+    balance:'A stop means double or half. For example, 1/250 second lets light in for half as long as 1/125 second. Aperture, shutter time and ISO each affect the result in a different way.',
+    'jpeg-settings':'JPEG quality controls how much the file is compressed to save space. Image size is the number of tiny dots, called pixels, in the image. Aspect ratio is the picture’s shape: wider, taller or square.',
+    'autofocus-controls':'Autofocus is the camera focusing for you. It needs to know when to focus, where to look and whether your subject is moving. One setting can change how another works.',
+    'jpeg-processing':'The camera makes a JPEG by choosing how your photo’s brightness, colors and fine details look. These choices cannot fix a missed focus point or add light that was never recorded.',
+    'lens-fieldwork':'The zoom ring changes how much fits in your picture. Moving yourself changes how objects line up. Move too close to an object and the lens will no longer be able to focus.',
+    'field-review':'A field review is simply a note about what happened when you tried something with your own camera: what you changed, what you saw and what you will try next.'
+  };
+  Object.entries(definitions).forEach(([id,text])=>lesson(id).definition=text);
+  const starts={
+    'scenario-window-object':['Put a cup beside a window. Use the first diagram to place yourself.','Turn the zoom ring to 35mm. Turn the mode dial to A. Choose f/2.8 and ISO AUTO.','Use AF-S and place the focus box on the cup lettering. Half-press, then take the photo.','Repeat at f/4 and f/8 from the same spot. Compare the cup and background, then note the shutter and ISO used.'],
+    'scenario-portrait':['Ask someone to stand in shade, looking toward the brighter open sky.','Start at their eye height. Use 50mm, M, f/2.8, 1/250 second and ISO AUTO.','Use AF-C and Human Face/Eye Priority. Check that the camera finds the nearer eye.','Take one photo, then move the person away from the background. Reframe and compare. Check the eye is clear.'],
+    'scenario-walking':['Choose a safe path and ask someone to walk across your view.','Start with 35mm, M, f/4, 1/500 second, ISO AUTO and AF-C.','Keep the person inside your focus zone. Half-press before taking a short burst.','Repeat at 1/125 and 1/1000 second. Compare the face, hands and feet. Count how many photos look sharp.'],
+    'scenario-park':['Pick just one subject: a tree, bench or bend in a path.','Try 18–24mm, A, f/8, ISO AUTO and AF-S. Put the focus box on your main subject.','Take one photo standing, then one crouching. Move sideways for a third.','Compare the edges, background and subject. Keep the frame that makes your subject easiest to notice.'],
+    'scenario-backlight':['Put a plant or willing person in front of a bright window.','Start with 35mm, A, f/4 and ISO AUTO. Focus on the subject and take a photo.','If the subject is too dark, try +0.3 exposure compensation and check again. Brightening may lose window detail.','Then move to the side-light arrangement in the second diagram. Compare which setup gives the result you want.'],
+    'scenario-finish-series':['Choose three photos from one outing: the place, the main subject and a small detail.','For each, write one change you want: for example, “Make the face a little brighter.”','Edit gently and compare with the original. Export a new JPEG and open it separately to check it.','Reshoot the weakest photo with one change to light, focus or framing. Write whether it helped.']
+  };
+  Object.entries(starts).forEach(([id,steps])=>lesson(id).quickStart=steps);
+  for(const l of data.lessons.filter(item=>item.scenario)){
+    l.sections=l.sections.map(([h,b])=>[h.replace('Starting settings and why','Settings to start with').replace('Diagnose and retry','If it goes wrong, try this').replace('Make three intentions','Try three different looks').replace('What success looks like','What to look for'),b]);
+    l.exercise='Write a short note: 1. What did I want? 2. Which settings did I use? 3. What went wrong or worked well? 4. What one thing did I change? 5. Did the next photo improve? Keep both photo files so you can compare them later.';
+  }
+  lesson('file-format').sections.push(['One press, two files','With RAW & JPEG selected, one press of the shutter saves two files of the same moment. For example, DSC01234.ARW is the RAW file and DSC01234.JPG is the ready-to-view JPEG. These filenames are illustrative. Keep both when copying to your Mac. You can edit the JPEG directly; RAW usually gives more room for large brightness or color corrections.']);
+  lesson('editing-setup').sections[0][1]='Use darktable as the free main editor for this course. Choose its Apple-silicon download for your M4 Mac. The official page we checked had conflicting macOS requirements: 14.0 on the download label and 13.5 in the installation notes. Check the requirements of the version you download against About This Mac. We have not installed it on your device.';
+  lesson('editing-setup').sections[1][1]='The official camera list includes your Sony ILCE-6400. It lists white-balance presets and a noise profile, which helps the editor reduce grain. This does not confirm a correction profile for your Sigma lens. Try two copied ARW files before importing a large collection.';
+  lesson('first-raw-edit').sections[1][1]='Find the crop and rotation tools in your installed editor. Crop means trimming away the edges; rotate means turning the picture a little to straighten it. Straighten a tilted horizon, then trim only what distracts from the subject. Tool names differ by version; “Crop & Rotate” is not a verified current darktable module name.';
+  lesson('first-raw-edit').sections[2][1]='Start with the color from the camera. Look at a neutral object, such as a grey wall: is it too orange or too blue? Make a small correction with the white-balance workflow documented for your installed editor. In darktable, white balance and color calibration work together; do not change unfamiliar modules at random. With mixed lamps and window light, one change may not correct every part.';
+  lesson('first-raw-edit').sections[4][1]='Shadows are the darker parts of the picture. Brighten them a little only if they hide something important. Stop if they look grainy or turn dull grey. “Shadows +14” is not a universal setting and is not a verified instruction for darktable’s color balance rgb module. Use the manual for the actual module and judge the visible change.';
+  lesson('first-raw-edit').exercise='Choose one photo. Straighten it if needed, correct an obvious color cast, then adjust brightness gently. For an exposure control measured in EV, +0.30 EV is a small brightening experiment. Compare with the original and undo any change that loses important detail. Record the actual tool and value you used.';
+  const recipes=lesson('scene-recipes');
+  recipes.definition='Saturation means how strong the colors look. Contrast means the difference between light and dark areas. A good starting edit fixes a visible problem without making the whole picture look unnatural.';
+  recipes.sections=[
+    ['Read a recipe as a suggestion','There is no single “professional” slider setting. A number such as Saturation +10 only makes sense when the app, tool and scale are known. Earlier numbers here were not verified for darktable, so use the visible goals below. Start with one small change, compare, then decide whether to keep it.'],
+    ['Outdoor daylight','If the subject looks dark, brighten it slightly. If clouds lose texture, ease back. Add a little color only if the picture looks dull; stop before grass or sky looks unnaturally bright.'],
+    ['Golden hour or sunset','Keep some of the warm evening color. If skin becomes orange, reduce the warmth or color strength. Keep visible texture in bright clouds where the file allows it.'],
+    ['Indoor window portrait','Make the face easy to see while keeping skin texture. Lift the dark side gently, then stop if grain becomes distracting. It is fine to leave some shadow: it gives the face shape.'],
+    ['Backlit portrait','Decide whether the face or the view outside matters more. Brightening the face can turn the window white. If both cannot look good together, return to the side-light setup in the backlight scenario.'],
+    ['Night street or dim room','Keep some areas dark so the scene still feels like night. Brighten only enough to show the subject. Reduce distracting color speckles gently; do not smooth away all the detail.'],
+    ['Compare three related photos','Open your three edits together. Do the skin tones and brightness feel similar? Adjust each photo as needed. Copying the same numbers does not guarantee the same look.']
+  ];
+  recipes.exercise='Choose a scene above. Make one gentle edit and one stronger edit of the same photo, keeping the original. Compare all three at the same size. Which keeps believable color and useful detail? Record the editor version, exact tool name and final value; do not copy a number from a different app.';
+  lesson('scenario-finish-series').sections[3][1]='Use the scene editing guide for visible goals, such as keeping skin natural or leaving some darkness at night. Slider numbers are different across tools and apps. Record the actual tool and value you use. Look up unfamiliar controls in the manual for your installed version.';
+  for(const l of data.lessons.filter(item=>item.stage==='editing')) l.sourceNote='Official installation and camera-list sources are linked below. They do not verify every editing tool. These lessons teach visual goals; exact darktable module steps and a workflow on your Mac still need checking. No edited result from your files is claimed.';
+  const extraTerms=[
+    ['Subject','The person or thing you want people to notice first.','composition'],
+    ['Camera angle','Where and how high you hold the camera while pointing it at the subject.','focal-length'],
+    ['Reframe','Move the camera or change the zoom to change what fits inside the picture.','composition'],
+    ['Half-press','Press the shutter button part-way and hold it before pressing fully to take the photo.','first-day'],
+    ['Color cast','An unwanted overall color, such as a white shirt looking orange under a lamp.','first-raw-edit']
+  ];
+  for(const term of extraTerms) if(!data.glossary.some(t=>t[0].toLowerCase()===term[0].toLowerCase())) data.glossary.push(term);
+})();
