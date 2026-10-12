@@ -108,12 +108,31 @@
     } else return '';
     return `<section class="setup-visual"><h2>Picture the setup</h2><p>${intro}</p><svg class="diagram-defs" aria-hidden="true" width="0" height="0"><defs><marker id="${id}-aim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#284f40"/></marker><marker id="${id}-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#97640c"/></marker></defs></svg><div class="setup-panels">${panels}</div><p class="note-hint">Original teaching diagrams. Not to scale, not camera screens and not examples of actual photo quality.</p></section>`;
   }
+  function conceptVisual(id) {
+    const spec=window.FIELD_GUIDE.conceptVisuals[id];
+    if(!spec)return '';
+    const ball=(x,opacity=1)=>`<circle cx="${x}" cy="58" r="19" fill="#45684d" opacity="${opacity}"/>`;
+    const frame=(label,art)=>`<figure class="concept-frame"><svg viewBox="0 0 260 130" role="img" aria-label="${escape(label)}">${art}</svg><figcaption>${label}</figcaption></figure>`;
+    const scene=(fill='#77876a')=>`<rect x="15" y="15" width="230" height="100" rx="8" fill="#dde5d6"/><path d="M15 98 L75 43 L131 97 L193 31 L245 96 V115 H15Z" fill="${fill}"/>`;
+    let body='';
+    if(spec.steps) body='<ol class="concept-steps '+(spec.parallel?'concept-choices':'')+'">'+spec.steps.map(([a,b],i)=>'<li><span class="concept-number">'+(spec.parallel?'•':i+1)+'</span><strong>'+escape(a)+'</strong><p>'+escape(b)+'</p></li>').join('')+'</ol>';
+    if(spec.kind==='motion')body=frame('Longer exposure: more travel during the photo',ball(66,.15)+ball(86,.3)+ball(106,.5)+ball(126,.7)+ball(146)+'<path d="M46 100 H200" stroke="#284f40" stroke-width="2"/>')+frame('Shorter exposure: a smaller slice of the movement',ball(126)+'<path d="M46 100 H200" stroke="#284f40" stroke-width="2"/>');
+    if(spec.kind==='noise'){
+      let grain='';for(let i=0;i<95;i++)grain+=`<circle cx="${20+(i*47)%220}" cy="${20+(i*29)%90}" r="1.7" fill="${i%2?'#304735':'#eef1e5'}" opacity=".7"/>`;
+      body=frame('Smooth illustration',scene())+frame('The same illustration with simulated grain',scene()+grain);
+    }
+    if(spec.kind==='focus')body=frame('Missed focus: check which object looks clear','<rect x="30" y="35" width="65" height="65" fill="#91a185" opacity=".4"/><path d="M175 30 V105 M148 52 H203" stroke="#284f40" stroke-width="9"/>')+frame('Subject motion: background stays in place','<path d="M175 30 V105 M148 52 H203" stroke="#284f40" stroke-width="9"/><path d="M28 70 H115" stroke="#91a185" stroke-width="32" stroke-linecap="round"/>')+frame('Camera movement: both objects can streak','<path d="M28 70 H115 M160 52 H222 M172 85 H222" stroke="#91a185" stroke-width="25" stroke-linecap="round"/>');
+    if(spec.kind==='histogram')body=frame('Dark ← tones in your photo → light','<path d="M20 18 V103 H242" fill="none" stroke="#284f40" stroke-width="2"/>'+[16,28,55,72,60,38,28,40,51,27,13].map((h,i)=>`<rect x="${28+i*18}" y="${103-h}" width="14" height="${h}" fill="#68845d"/>`).join(''));
+    if(spec.kind==='drive')body=frame('Single: one recorded moment',ball(130))+frame('Burst: successive moments',[50,130,210].map(x=>ball(x)).join(''))+frame('Exposure bracket: deliberately different brightness',[45,120,195].map((x,i)=>`<rect x="${x-28}" y="30" width="55" height="65" rx="5" fill="${['#344738','#85977c','#d5dfc7'][i]}"/>`).join(''));
+    if(spec.kind==='edit')body=frame('Dark starting illustration',scene('#354636')+'<rect x="15" y="15" width="230" height="100" fill="#1e3028" opacity=".4"/>')+frame('Gentle brightening: shapes stay separate',scene())+frame('Too strong: bright parts lose separation',scene('#d6dcca')+'<rect x="15" y="15" width="230" height="100" fill="white" opacity=".55"/>');
+    return '<section class="concept-visual"><h2>'+escape(spec.title)+'</h2><div class="'+(spec.steps?'':'concept-frames')+'">'+body+'</div><p class="visual-caption">'+escape(spec.caption)+'</p><p class="note-hint">Original teaching illustration. Not a camera screen, measured result or actual before/after photograph.</p></section>';
+  }
   function lessonPage(id) {
     const lesson = lessons.find(item => item.id === id);
     if (!lesson) return notFound();
     state.lastLesson = id; save();
     const index = lessons.indexOf(lesson);
-    const visual = setupVisual(id);
+    const visual = setupVisual(id) + conceptVisual(id);
     const lessonText = JSON.stringify(lesson).toLowerCase();
     const words = glossary.filter(([term])=>lessonText.includes(term.toLowerCase())).slice(0,10);
     const wordHelp = words.length ? '<details class="sharing-sources lesson-words"><summary>Words used in this lesson — simple meanings</summary><dl>'+words.map(([term,meaning])=>'<dt>'+escape(term)+'</dt><dd>'+escape(meaning)+'</dd>').join('')+'</dl></details>' : '';
@@ -204,6 +223,11 @@
     let detail; try { detail = decodeURIComponent(parts.join('/')); } catch { detail = ''; }
     const renderers = {home, learn, scenarios:scenariosPage, lesson:()=>lessonPage(detail), guides:()=>guidesPage(), guide:()=>guidesPage(detail), editing:editingPage, practice, notebook, kit, share:()=>sharingPage(detail), camera:()=>cameraPage(detail), menu:()=>menuPage(detail), search:()=>searchPage(detail)};
     main.innerHTML = (Object.prototype.hasOwnProperty.call(renderers,page) ? renderers[page] : notFound)();
+    if(page==='guide'){
+      const guideVisuals={portrait:'scenario-portrait',landscape:'scenario-park',indoor:'scenario-window-object',motion:'scenario-walking',backlit:'scenario-backlight'};
+      const visualId=guideVisuals[detail];
+      if(visualId)main.insertAdjacentHTML('beforeend',setupVisual(visualId));
+    }
     if(page==='practice'){
       main.querySelector('.callout').insertAdjacentHTML('beforebegin','<div class="callout"><strong>Ready to practise all five skills?</strong> <a href="#scenarios">Try six real-life scenarios →</a> Each has settings, comparisons, troubleshooting and a saved practice record.</div>');
       const assignments=lessons.filter(item=>['portrait-light-assignment','indoor-light-assignment','backlit-assignment'].includes(item.id));
