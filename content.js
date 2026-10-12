@@ -4926,4 +4926,7 @@ window.FIELD_GUIDE.glossary.find(term => term[0] === 'White balance')[2] = 'avai
   indoor.settings=['18–35mm','f/2.8–f/4','Try 1/250s for gentle motion','Auto ISO; check limits'];
   indoor.steps.push('If mixed lamps and window light give uneven color, simplify the light on the subject. Make a wide, medium and detail story; use the linked assignment for flash and flicker checks.');
   data.guides.push({id:'backlit',title:'A face against a bright window',tag:'BACKLIGHT',symbol:'◐',intro:'Choose the face, the window view or an intentional silhouette; change the light if you want more of both.',settings:['A · f/4 starting point','Multi metering','ISO AUTO','Check actual shutter'],steps:['Make a baseline and inspect the face and bright detail. Try small positive compensation for a face-first image.','Try a darker exposure for a readable silhouette or preserved view. Refine the outline and background.','For a third version, turn toward useful light, reflect light with white material or follow the built-in-flash lesson at 1/125 second. Compare the three intentions.'],lesson:'backlit-assignment'});
+  // Present the curriculum in stage order. Stable IDs—not row numbers—store progress.
+  const stageOrder = {undefined: 0, controls: 1, fieldcraft: 2};
+  data.lessons.sort((a, b) => stageOrder[String(a.stage)] - stageOrder[String(b.stage)]);
 })();
