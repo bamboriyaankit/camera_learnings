@@ -56,7 +56,7 @@
     ];
     return title('YOUR LEARNING PATH','Start simple. Build from there.','Follow a stage, or return to a concept whenever you need it.') + progressBar() +
       stages.map(stage=>`<section class="section-space" data-stage="${stage.id || 'foundations'}"><div class="section-head"><h2>${stage.title}</h2><span class="badge">Available now</span></div><p>${stage.intro}</p><div class="lesson-list">${lessons.filter(item=>item.stage===stage.id).map(item=>lessonRow(item,lessons.indexOf(item))).join('')}</div></section>`).join('') +
-      `<div class="roadmap"><span class="eyebrow">THE ROAD AHEAD</span><h3>Keep practising, then build on the results.</h3><p>Capture, composition and available-light lessons are ready. The complete menu reference, deeper lighting/composition, editing and advanced practice remain in progress or planned. Editing and cloud uploads stay deferred.</p><a class="text-link" href="#camera">Look up ${menuEntries.length} Sony topics · ${menuEntries.filter(entry=>entry.guide).length} explained →</a></div><section class="section-space"><h2>A small dictionary for your camera</h2><dl class="glossary">${glossary.map(([term,definition,id])=>`<div><dt><a href="#lesson/${id}">${term}</a></dt><dd>${definition}</dd></div>`).join('')}</dl></section>`;
+      `<div class="roadmap"><span class="eyebrow">THE ROAD AHEAD</span><h3>Keep practising, then build on the results.</h3><p>Exposure, built-in flash, JPEG processing and portrait/indoor/backlight assignments are ready. The complete menu reference, further lighting, editing and advanced practice remain in progress or planned. Editing tutorials and cloud uploads stay deferred.</p><a class="text-link" href="#camera">Look up ${menuEntries.length} Sony topics · ${menuEntries.filter(entry=>entry.guide).length} explained →</a></div><section class="section-space"><h2>A small dictionary for your camera</h2><dl class="glossary">${glossary.map(([term,definition,id])=>`<div><dt><a href="#lesson/${id}">${term}</a></dt><dd>${definition}</dd></div>`).join('')}</dl></section>`;
   }
   function lessonPage(id) {
     const lesson = lessons.find(item => item.id === id);
@@ -150,6 +150,10 @@
     let detail; try { detail = decodeURIComponent(parts.join('/')); } catch { detail = ''; }
     const renderers = {home, learn, lesson:()=>lessonPage(detail), guides:()=>guidesPage(), guide:()=>guidesPage(detail), practice, notebook, kit, share:()=>sharingPage(detail), camera:()=>cameraPage(detail), menu:()=>menuPage(detail), search:()=>searchPage(detail)};
     main.innerHTML = (Object.prototype.hasOwnProperty.call(renderers,page) ? renderers[page] : notFound)();
+    if(page==='practice'){
+      const assignments=lessons.filter(item=>['portrait-light-assignment','indoor-light-assignment','backlit-assignment'].includes(item.id));
+      main.querySelector('.callout').insertAdjacentHTML('afterend',`<section class="section-space practice-assignments"><h2>Put composition and light together</h2><p>Each assignment has its own review prompts and notebook space. Save the actual settings and one observation after your shoot.</p><div class="card-grid">${assignments.map(lessonCard).join('')}</div></section>`);
+    }
     if(page==='lesson'){
       const lesson=lessons.find(item=>item.id===detail);
       if(lesson && lesson.sources){

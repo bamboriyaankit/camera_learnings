@@ -1,8 +1,8 @@
 # Camera foundations: start from zero
 
-Status: first teaching draft, 2026-10-11. This conceptual draft is retained alongside the published learning website and is not fully source-reviewed. See `research.md` for verified camera instructions and remaining equipment claims.
+Status: conceptual draft with targeted exposure review, 2026-10-12. The shutter/ISO/combined-exposure material and camera limits were reviewed for the exposure/flash increment; a full optics and physical-camera review remains outstanding. See `research.md` for exact evidence and remaining checks.
 
-Implementation note: `content.js` includes eight foundations lessons based on this draft plus fourteen camera-practice/controls lessons and two Composition & Light lessons (24 total in the current release). The capture curriculum includes first-day setup, practical focus/exposure walkthroughs, JPEG settings, a phone-comparison assignment, Auto/P, drive/bracketing, custom controls and autofocus dependencies. See `research.md` for the specific verified Sony menu paths and `camera-reference-plan.md` for the 201-topic inventory and remaining reference work (73 entries explained; 128 source-only). The Share photos section explains free transfer, album, and download-link workflows.
+Implementation note: `content.js` now includes eight foundations lessons, seventeen camera-practice lessons and five Composition & Light lessons (30 total). The latest addition deepens exposure decisions, built-in flash and in-camera JPEG processing, with portrait, indoor and backlit assignments. The 201-topic reference explains 91 entries; 110 remain source-only. See `progress.md` for deployment status and `research.md` for evidence. The Share photos section remains instructional.
 
 ## How we will learn
 
@@ -55,13 +55,15 @@ The aperture range needed also depends on focal length, distance, framing, and h
 
 For a person standing fairly still, start around 1/125–1/250 second. For active children or pets, try 1/500–1/1000 second or faster. Subject speed, direction, distance, focal length, and your steadiness affect what is enough.
 
+These are available-light suggestions. For the a6400 built-in flash, start at 1/125 second within Sony's specified 1/160 flash-sync limit. Raise the flash fully, remove the hood, stay at least 1 metre away and wait for recharge. Silent Shooting disables flash. Sony recommends e-Front Curtain Shutter Off with third-party lenses; use that conservative starting point with the Sigma, without claiming a tested fault in this particular lens. The flash lesson explains output, ambient light and blur separately.
+
 For intentional motion blur, try a longer exposure with a supported camera and a moving subject. A tripod steadies the camera; it cannot stop a person moving during the exposure. Start long-exposure practice with an ordinary indoor scene or in shade; bright daylight may require additional light reduction.
 
 ### ISO in practice
 
 Use a low ISO such as 100 when there is enough light for the aperture and shutter speed you need. In dim conditions, a higher ISO can help you retain a shutter speed that keeps the subject sharp. A sharp photo with some noise is often more useful than a clean-looking photo spoiled by unintended motion blur.
 
-Auto ISO can let the camera handle this choice while you concentrate on aperture or shutter speed. Learn how to inspect the values the camera chose and whether it reached an ISO limit. Exact a6400 configuration steps will be added after verification.
+Auto ISO can let the camera handle this choice while you concentrate on aperture or shutter speed. On the a6400 use MENU → Camera Settings1 → ISO Setting → ISO → ISO AUTO; press right to set its minimum/maximum. Inspect the actual values and blinking limits. ISO AUTO Min. SS is a threshold for raising ISO in P/A, not an absolute shutter-speed floor. Multi Frame NR combines captures and is separate from ordinary ISO; it cannot be used with RAW/RAW & JPEG or flash.
 
 ## 3. How the settings work together
 
@@ -77,6 +79,10 @@ Decide in this order:
 4. Review sharpness and brightness; change the setting responsible for the problem.
 
 In bright light you may need a faster shutter or smaller aperture even at the lowest suitable ISO. In low light you may need more light, a wider aperture, higher ISO, or a longer exposure if the subject allows it.
+
+On the a6400, Exposure Comp. works in P/A/S and in M with ISO AUTO. It does not work in Intelligent Auto, Superior Auto, Scene Selection or M with a fixed ISO. With fixed manual exposure, change aperture, shutter, ISO or the light yourself. Meter zero is a reference, not a guarantee of the intended brightness. If a bright window and dark face exceed what one exposure can retain, choose the important detail or change the light. DRO adjusts a single capture's tones; Auto HDR combines three exposures, requires JPEG only and is unsuitable for unpredictable movement.
+
+Targeted source review (2026-10-12; older retrieved sources dated 2026-10-11): Sony [Shutter Priority](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241171.html), [Manual Exposure](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264646.html), [ISO](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264686.html), [Exposure Comp.](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264676.html), [Using flash](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264653.html), [Specifications](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002280326.html), [e-Front Curtain Shutter](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002241275.html), [DRO](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264688.html) and [Auto HDR](https://helpguide.sony.net/ilc/1810/v1/en/contents/TP0002264689.html). Practical recipes and stop comparisons are illustrative teaching examples, not measured photo results. Remaining optics entries below are still part of the wider draft review.
 
 ## 4. Optics and supporting vocabulary
 

@@ -5,9 +5,9 @@ Repository: https://github.com/bamboriyaankit/camera_learnings
 Site address: https://bamboriyaankit.github.io/camera_learnings/
 
 First Light is a free photography learning guide for a Sony a6400 and Sigma
-18–50mm lens. It contains twenty-four lessons covering foundations and camera practice, shooting guides, sharing
-advice, quizzes, and a notebook saved in your browser. The camera reference indexes 201 Sony topics and explains 73 entries. The remaining
-128 menu explanations, editing lessons, and private photo uploads remain planned.
+18–50mm lens. It contains thirty lessons, five shooting guides, sharing
+advice, quizzes, and a notebook saved in your browser. The camera reference indexes 201 Sony topics and explains 91 entries. The remaining
+110 menu explanations, editing lessons, and private photo uploads remain planned.
 
 The camera-controls increment adds Auto/P, single/burst/timer/bracketing, custom buttons, Fn/My Menu and autofocus troubleshooting. Each lesson includes an exercise, quiz and Sony sources. Camera instructions have not yet been tested on the owner’s physical camera.
 
@@ -68,3 +68,5 @@ Draft content and planned stages remain labeled after publication.
 - https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
 The capture-fluency and Composition & Light increment adds five lessons: the confirmed Sigma 18–50mm Sony E lens, Memory/My Dial/scenes, registered faces and Smile Shutter, composition, and available light. The learning path has three stages. General principles use Nikon sources, lens specifications use Sigma, and all camera-menu paths use Sony’s a6400 guide. Editing and cloud uploads remain deferred.
+
+The exposure/flash/JPEG increment adds six lessons and eighteen menu explanations. Learn metering, exposure locking, built-in fill flash, Creative Style, DRO, Auto HDR and noise reduction, then try portrait, indoor and backlit assignments. Relevant exposure foundations were reviewed; other draft optics and physical-camera checks remain outstanding. Existing lesson IDs and notebook data remain compatible. The later Mac editing preparation roadmap remains in the project handoff; no editing software or cloud uploads are required here.
