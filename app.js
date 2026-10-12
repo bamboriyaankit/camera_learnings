@@ -52,11 +52,17 @@
     const stages = [
       {id: undefined, title: '01 / The foundations', intro: 'Understand light, exposure and focus one concept at a time.'},
       {id: 'controls', title: '02 / Camera in practice', intro: 'Set up your camera, learn its controls and explore the confirmed Sigma 18–50mm lens.'},
-      {id: 'fieldcraft', title: '03 / Composition & light', intro: 'Arrange the frame and work with the light you already have. Each lesson ends with a small photo assignment.'}
+      {id: 'fieldcraft', title: '03 / Composition & light', intro: 'Arrange the frame and work with the light you already have. Each lesson ends with a small photo assignment.'},
+      {id: 'editing', title: '04 / Edit with intention', intro: 'Use one free RAW editor to make natural, polished JPEGs while keeping your originals.'}
     ];
     return title('YOUR LEARNING PATH','Start simple. Build from there.','Follow a stage, or return to a concept whenever you need it.') + progressBar() +
       stages.map(stage=>`<section class="section-space" data-stage="${stage.id || 'foundations'}"><div class="section-head"><h2>${stage.title}</h2><span class="badge">Available now</span></div><p>${stage.intro}</p><div class="lesson-list">${lessons.filter(item=>item.stage===stage.id).map(item=>lessonRow(item,lessons.indexOf(item))).join('')}</div></section>`).join('') +
-      `<div class="roadmap"><span class="eyebrow">THE ROAD AHEAD</span><h3>Keep practising, then build on the results.</h3><p>The full menu reference is available with source-linked concise guidance. Next, use the field review on your own camera, then build on the real results with deeper lighting and later editing practice. Editing tutorials and cloud uploads stay deferred.</p><a class="text-link" href="#camera">Look up ${menuEntries.length} Sony topics · ${menuEntries.filter(entry=>entry.guide).length} explained →</a></div><section class="section-space"><h2>A small dictionary for your camera</h2><dl class="glossary">${glossary.map(([term,definition,id])=>`<div><dt><a href="#lesson/${id}">${term}</a></dt><dd>${definition}</dd></div>`).join('')}</dl></section>`;
+      `<div class="roadmap"><span class="eyebrow">THE ROAD AHEAD</span><h3>Keep practising, then build on the results.</h3><p>The full menu reference is available with source-linked concise guidance. Next, use the field review on your own camera and apply the editing workflow to your best local originals. Cloud uploads remain separate.</p><a class="text-link" href="#editing">Open the free editing workflow →</a></div><section class="section-space"><h2>A small dictionary for your camera and edits</h2><dl class="glossary">${glossary.map(([term,definition,id])=>`<div><dt><a href="#lesson/${id}">${term}</a></dt><dd>${definition}</dd></div>`).join('')}</dl></section>`;
+  }
+  function editingPage() {
+    const editLessons = lessons.filter(item => item.stage === 'editing');
+    return title('FREE EDITING','Make a good photograph look finished.','Use darktable on your MacBook Air M4: free, open-source RAW editing for your Sony a6400 files.') +
+      `<div class="callout"><strong>One editor, no subscription.</strong><p>darktable 5.6.2 has an Apple-silicon download and requires macOS 13.5 or newer. Its official support list includes ILCE-6400 with white-balance presets and lens-correction data. Confirm your macOS version before installing; no app was installed or tested on your Mac by this site.</p></div><section class="section-space"><h2>Your professional-looking workflow</h2><ol class="share-workflow"><li><strong>Keep</strong><span>Originals safe</span></li><li><strong>Select</strong><span>Choose the strongest frame</span></li><li><strong>Correct</strong><span>Light, color, framing</span></li><li><strong>Export</strong><span>Share an sRGB JPEG</span></li></ol></section><section class="section-space"><h2>Start here</h2><div class="card-grid">${editLessons.map(lessonCard).join('')}</div></section><section class="section-space"><h2>What “professional” means here</h2><p>A professional-looking edit is usually believable: the subject is clear, bright areas still have texture, skin and neutral objects do not look strangely colored, the crop feels deliberate, and sharpening/noise reduction are subtle. It is not a fixed saturation number. Use the scene recipes as a first test, compare with the original, then reduce any adjustment that calls attention to itself.</p></section><details class="sharing-sources section-space"><summary>Official darktable sources</summary><ul><li><a href="https://www.darktable.org/install/" target="_blank" rel="noopener noreferrer">Installation and macOS requirements</a> · checked 2026-10-12</li><li><a href="https://www.darktable.org/resources/camera-support/" target="_blank" rel="noopener noreferrer">Camera support list</a> · checked 2026-10-12</li></ul></details>`;
   }
   function lessonPage(id) {
     const lesson = lessons.find(item => item.id === id);
@@ -148,7 +154,7 @@
     const route = location.hash.slice(1) || 'home';
     const [page, ...parts] = route.split('/');
     let detail; try { detail = decodeURIComponent(parts.join('/')); } catch { detail = ''; }
-    const renderers = {home, learn, lesson:()=>lessonPage(detail), guides:()=>guidesPage(), guide:()=>guidesPage(detail), practice, notebook, kit, share:()=>sharingPage(detail), camera:()=>cameraPage(detail), menu:()=>menuPage(detail), search:()=>searchPage(detail)};
+    const renderers = {home, learn, lesson:()=>lessonPage(detail), guides:()=>guidesPage(), guide:()=>guidesPage(detail), editing:editingPage, practice, notebook, kit, share:()=>sharingPage(detail), camera:()=>cameraPage(detail), menu:()=>menuPage(detail), search:()=>searchPage(detail)};
     main.innerHTML = (Object.prototype.hasOwnProperty.call(renderers,page) ? renderers[page] : notFound)();
     if(page==='practice'){
       const assignments=lessons.filter(item=>['portrait-light-assignment','indoor-light-assignment','backlit-assignment'].includes(item.id));
@@ -179,7 +185,8 @@
         main.insertAdjacentHTML('beforeend',`<section class="section-space"><h2>Sharing guides</h2><div class="lesson-list">${matches.map(method=>`<a class="lesson-row" href="#share/${method.id}"><div><h3>${method.title}</h3><p>${method.intro}</p></div><span class="row-end" aria-hidden="true">↗</span></a>`).join('')}</div></section>`);
       }
     }
-    const active = {lesson:'learn',guide:'guides',search:'learn',menu:'camera'}[page] || page;
+    const currentLesson = page === 'lesson' ? lessons.find(item => item.id === detail) : null;
+    const active = currentLesson && currentLesson.stage === 'editing' ? 'editing' : ({lesson:'learn',guide:'guides',search:'learn',menu:'camera'}[page] || page);
     document.querySelectorAll('[data-nav]').forEach(link=> { if(link.dataset.nav===active) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current'); });
     const heading = main.querySelector('h1');
     document.title = `${heading ? heading.textContent : 'Your field guide'} — First Light`;
