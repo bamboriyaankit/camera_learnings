@@ -4988,3 +4988,98 @@ window.FIELD_GUIDE.glossary.find(term => term[0] === 'White balance')[2] = 'avai
   const order = {undefined:0,controls:1,fieldcraft:2,editing:3};
   data.lessons.sort((a,b) => order[String(a.stage)] - order[String(b.stage)]);
 })();
+
+// Original practice briefs, reusing the source-backed lessons they build on.
+(() => {
+  const data = window.FIELD_GUIDE;
+  const briefs = [
+    {id:'scenario-window-object',title:'A cup by a window',time:20,symbol:'☀',
+      intro:'Practise aperture, light direction and identifying camera shake with a cup, book or plant.',
+      prerequisites:['aperture','available-light'],
+      definition:'Depth of field is the range of distances that looks sharp. Camera shake is movement of the camera during the exposure; it can smear the whole picture.',
+      sections:[
+        ['Set the scene','Place a cup on a table near a window, with space between it and the background. Use available daylight and turn off a nearby warm lamp if it gives confusing color. Work with what you already own.'],
+        ['Starting settings and why','Try 35mm, A (aperture priority), f/2.8, ISO AUTO, AF-S (focus once on a still subject), and a small Flexible Spot on the cup lettering. A lets you choose aperture while the camera chooses shutter time. Read the actual shutter and ISO before each photo.'],
+        ['Make three deliberate attempts','From the same position, photograph at f/2.8, f/4 and f/8. Recheck focus and support each time. As the opening gets smaller, the camera may lengthen shutter time or raise Auto ISO; record both. Then return to f/4 and move around the table to compare front light with light from the side.'],
+        ['What success looks like','At the same viewing size, the lettering should be clear. You should be able to point to a difference in background blur and describe how side light reveals the shape. Choose the image that makes the cup stand out, rather than automatically choosing the blurriest background.'],
+        ['Diagnose and retry','If everything is smeared, suspect shake: repeat using secure support or more light. If something behind the cup is sharp but the lettering is not, place the focus spot more carefully. If only a thin slice of the cup is sharp, try f/4 or f/5.6. Change one thing and compare.'],
+        ['Example observation — illustrative, not a measured result','“The f/8 version was soft across the frame and used a slower shutter. I supported the camera securely and repeated it. The lettering became clearer.” Your result may differ: record your actual evidence.']
+      ], question:'The background is sharp but the cup lettering is soft. What should you check first?',options:['Whether the focus point was on the cup','Whether saturation is high enough','Whether the exported file has a short name'],answer:0,explanation:'A sharp background suggests focus may have landed behind the intended subject. Check placement before adding sharpening.'},
+    {id:'scenario-portrait',title:'A natural portrait in open shade',time:25,symbol:'◉',
+      intro:'Make a willing person look clear and natural using soft light, careful focus and a quiet background.',
+      prerequisites:['portrait-light-assignment','eye-tracking'],
+      definition:'Open shade is an area out of direct sun that still receives daylight from the open sky. A keeper is a frame you would choose to keep for its focus, expression and composition.',
+      sections:[
+        ['Find light and get agreement','Ask a willing person to stand in open shade, facing the brighter open area. Keep them away from a busy background. Make the exercise comfortable; no purchase or special reflector is needed.'],
+        ['Starting settings and why','Try 50mm and M (manual exposure), f/2.8, 1/250 second and ISO AUTO, with AF-C (continuous focus) and Human Face/Eye Priority enabled. You set the opening and shutter; the camera sets ISO. This is an available-light exercise with flash off. Review actual brightness and ISO; these numbers are a starting point.'],
+        ['Make three comparisons','Take a portrait with the background close, then move the person farther from it and reframe. Compare f/2.8 with f/4, then change your camera height slightly. Keep focus on the nearer eye and ask for a small natural turn or conversation rather than a stiff pose.'],
+        ['What success looks like','The nearer eye is clear at an enlarged view, the expression feels comfortable, and no bright object or branch distracts behind the head. Skin looks believable. Choose three keepers from a short set and explain your choices.'],
+        ['Diagnose and retry','If hair behind the eye is sharp, check which eye or area was targeted. If a moving face is smeared, try 1/500 second and inspect the resulting ISO and brightness. If the eye is sharp but other facial details fall outside the sharp range, try f/4. If the face is dull, turn toward the brighter sky before increasing color in editing.'],
+        ['Finish gently','Crop a distracting edge if needed. Adjust brightness and color only when they improve the face. Compare at the same size with the camera JPEG. Keep natural skin texture and stop before bright skin areas lose detail.']
+      ],question:'Why try f/4 after a portrait at f/2.8?',options:['To guarantee every background is sharp','To make a larger range of facial distances look sharp','To make the person move less'],answer:1,explanation:'A smaller opening can give more depth of field. Focus, distance and movement still matter.'},
+    {id:'scenario-walking',title:'Freeze a person walking past',time:20,symbol:'↗',
+      intro:'Learn the difference between missed focus and movement blur with a repeatable, safe walking path.',
+      prerequisites:['shutter','eye-tracking','drive-bracketing'],
+      definition:'Motion blur is a smear caused by a subject moving during an exposure. A faster shutter records a shorter slice of time. AF-C keeps adjusting focus while activated.',
+      sections:[
+        ['Set up a safe repeat','Use an open path away from traffic. Ask a willing person to walk across your view at a normal pace. Stay still and leave space in front of the direction they are walking.'],
+        ['Starting settings and why','Try 35mm, M, f/4, 1/500 second, ISO AUTO, AF-C and Zone over the person, with Human Face/Eye Priority on. Keep flash off. Begin in good daylight and watch whether Auto ISO and brightness remain usable.'],
+        ['Compare three shutter times','Make short passes at 1/125, 1/500 and 1/1000 second, keeping aperture and framing similar. Half-press to activate focus before releasing the shutter; use a short burst if helpful. These are comparisons, not guaranteed freezing speeds. Record actual ISO too.'],
+        ['What success looks like','Compare five frames from each pass at the same size. Count how many have a clear face and acceptable movement in hands or feet. Explain why you chose a speed; not every part of a walking person moves equally fast.'],
+        ['Diagnose and retry','Clear background with smeared limbs suggests movement blur. Sharp detail at the wrong distance suggests focus placement. Whole-frame streaks suggest shake or camera movement. Try one faster shutter or a better focus zone, then repeat the same walking path. In dim light, a faster shutter may require higher ISO or leave the photo too dark if limits are reached.'],
+        ['Example review — illustrative','“At the slower shutter the face looked usable but the hands blurred. I kept the faster version for a crisp action look.” A deliberately blurred frame can also work; the goal is choosing the result intentionally.']
+      ],question:'A faster shutter improves moving hands but Auto ISO rises. Why?',options:['The shorter exposure collects less light, so the camera raises ISO to maintain brightness','The lens has changed its focal length','AF-C makes the image brighter'],answer:0,explanation:'Shorter exposure time collects less light. Auto ISO can compensate in brightness within its limits, with possible noise trade-offs.'},
+    {id:'scenario-park',title:'Turn a park corner into a photograph',time:25,symbol:'▧',
+      intro:'Practise choosing a subject, arranging the frame and keeping useful detail sharp.',
+      prerequisites:['composition','lens-fieldwork','exposure-decisions'],
+      definition:'A leading line is a visible edge, path or shape that draws the eye through a photo. A horizon is the apparent line where land or water meets the sky.',
+      sections:[
+        ['Choose one idea','Find a tree, bench or path in a nearby park or garden. Say what you want the viewer to notice before raising the camera. Avoid including everything just because 18mm fits it in.'],
+        ['Starting settings and why','Try 18–24mm, A, f/8, ISO AUTO and AF-S on the main subject. Check shutter speed and use secure support if it becomes too slow for steady handholding. f/8 is a starting point for depth of field; it does not guarantee sharpness from a very close foreground to infinity.'],
+        ['Make three compositions','Photograph from eye level, then lower the camera, then move sideways so a path or edge leads toward the subject. Keep the horizon intentional. Compare a wider view with a tighter 35mm view. Watch the four edges for cut-off objects and bright distractions.'],
+        ['What success looks like','A viewer can identify your subject without explanation. The horizon feels deliberate, the important near and far details are acceptably clear at the intended viewing size, and the sky retains detail where you want it.'],
+        ['Diagnose and retry','If the foreground is soft but the tree is sharp, reconsider how close that foreground is and where you focused; moving back may help. If everything smears, check support and shutter. If sky detail disappears, try −0.3 or −0.7 EV exposure compensation in A, then inspect whether the subject became too dark. You may need a different angle or gentler light.'],
+        ['Edit for the scene','Straighten only if needed, trim an unnecessary edge and keep foliage color believable. Compare against the original at equal size. Do not make every shadow bright: light and shade help describe shape.']
+      ],question:'What should you decide before trying to include more of a park?',options:['The maximum saturation number','The main subject or idea of the photo','How many files you can delete'],answer:1,explanation:'A clear subject makes framing choices purposeful; a wider lens does not automatically make a stronger photograph.'},
+    {id:'scenario-backlight',title:'A subject against a bright window',time:20,symbol:'◐',
+      intro:'Learn when to change exposure, when to change the light, and when to keep a silhouette.',
+      prerequisites:['backlit-assignment','exposure-decisions'],
+      definition:'Backlight comes from behind your subject. Clipped highlights are bright areas with no remaining recorded detail. A silhouette is a recognizable dark outline against a lighter background.',
+      sections:[
+        ['Build a simple scene','Place a plant or a willing person in front of a bright window. Do not photograph directly toward the sun. Make a baseline before changing anything.'],
+        ['Starting settings and why','Try 35mm, A, f/4, ISO AUTO and Multi metering. Use AF-S on a still plant or AF-C with Human eye priority for a person. Check actual shutter speed and subject sharpness. Keep flash off for this comparison.'],
+        ['Make three intentions','First expose for the subject: try +0.3 then +0.7 EV if it is too dark. Next reduce exposure until the outline makes a deliberate silhouette. Finally move yourself and the subject so the window lights it from the side; reset compensation to 0 and review before adjusting again.'],
+        ['What success looks like','Keep one useful subject-first frame, one readable silhouette and one frame with gentler brightness differences. Describe which details you chose to preserve. A plain white window can be acceptable in a portrait when that was your intention.'],
+        ['Diagnose and retry','If the face is noisy after brightening, the capture may not contain enough useful light. Move toward better light and repeat. If the window remains blank when darkened in editing, do not assume a stronger slider will restore it. Choose a different exposure or lighting arrangement.'],
+        ['Optional RAW and JPEG comparison','If you captured RAW & JPEG, compare edits of the matching pair at the same viewing size. Record where either runs out of usable detail. This is your own test, not a promise that RAW can rescue every window or face.']
+      ],question:'What can help when the face and window cannot both retain useful detail?',options:['Increase saturation','Change the lighting arrangement or choose which detail matters most','Assume RAW always fixes it'],answer:1,explanation:'Changing scene contrast or choosing a priority can solve what one exposure or an edit cannot.'},
+    {id:'scenario-finish-series',title:'Finish a three-photo story',time:40,symbol:'✓',
+      intro:'Combine selection, natural editing, export and an evidence-based reshoot.',
+      prerequisites:['scenario-window-object','scenario-portrait','scenario-walking','scenario-park','scenario-backlight','detail-and-export'],
+      definition:'A series is a small set of photos that belongs together. Consistency means their brightness, color and presentation feel related. An export is a new viewable file made from an edit.',
+      sections:[
+        ['Choose three local originals','Pick a wide view, a medium view and a detail from one outing or window-light session. Use JPEGs directly if you prefer; use RAW files when you want to practise RAW development. Keep the originals untouched and work in your free editor. No photo upload is needed here.'],
+        ['Write your intention before editing','For each frame name one problem and one thing to preserve. Example: “Brighten the face a little, but retain texture in the white shirt.” Select a sharper alternative when focus is missed rather than trying to solve it with sharpening.'],
+        ['Make a natural edit','Crop or straighten if it improves the frame, correct an obvious unwanted color cast, then adjust brightness gently. Compare with the original at equal size after each change. View enlarged to inspect detail and at fit-to-screen to judge the whole photo. Match the set by eye; identical slider values need not give consistent results.'],
+        ['Use the editor controls you have confirmed','The earlier scene-recipes page contains illustrative numbers, not validated darktable module instructions. Do not treat “Shadows +14” or “Saturation +10” as universal settings. For this challenge, judge visible improvements and record the actual tool name and value you used. If a control is unfamiliar, consult the manual for your installed editor version before applying it.'],
+        ['Export and check the actual result','Create a new JPEG in an Exports folder, using sRGB for ordinary viewing and sharing where the export settings offer it. Retain full dimensions for a detailed copy; optionally make a smaller viewing copy around 2500 pixels on the long edge. Open the exported file separately and check brightness, color, crop and detail. Keep original files and edit instructions as well as the export.'],
+        ['Return to the camera','Choose the weakest frame and reshoot it with one deliberate change: better light, a faster shutter, more careful focus or a cleaner background. Record the old and new actual settings. Compare at the same size and explain what improved or why the change did not work.'],
+        ['Your five-skill review','Give yourself 0 (not yet), 1 (with help), or 2 (independently) for each: explain aperture/shutter/ISO choices; focus and diagnose blur; choose light and composition; make a natural edit and checked export; improve a weak result. Write evidence for each score. Repeat on another day in different light. This is a practice record, not a qualification or an automatic intermediate-level certificate.']
+      ],question:'What is the strongest evidence that you improved a weak photo?',options:['You completed every page','You changed one relevant factor, compared the results and can explain the visible difference','You used the largest slider values'],answer:1,explanation:'Repeatable choices and visible results show practical progress better than page completion alone.'}
+  ];
+  data.lessons.push(...briefs.map(brief => {
+    const sources = [];
+    for (const id of brief.prerequisites) {
+      const parent = data.lessons.find(item => item.id === id);
+      for (const source of parent && parent.sources || []) {
+        if (!sources.some(item => item.url === source.url)) sources.push(source);
+      }
+    }
+    return Object.assign({}, brief, {
+      stage:'scenarios',category:'PRACTICE SCENARIOS',scenario:true,
+      exercise:'Save a record here: date and subject; intention; actual focal length, aperture, shutter, ISO and focus choice; first result; one change; second result; what you learned. Include original/export filenames and editing tools if used. Keep photos locally. Mark complete after trying the scenario, not just reading it.',
+      sources,
+      sourceNote:'Original practice scenarios using the documented principles in the linked prerequisite lessons. Source dates below are retained from those lessons. Suggested settings are starting points, not measured results or guaranteed outcomes. No user photographs or physical-camera tests are claimed.'
+    });
+  }));
+})();

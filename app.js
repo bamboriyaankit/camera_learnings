@@ -38,14 +38,14 @@
     return `<figure class="reference-image"><a href="${src}" target="_blank" rel="noopener noreferrer" aria-label="Open full image: ${escape(alt)}"><img src="${src}" alt="${escape(alt)}" width="${width}" height="${height}" loading="lazy" decoding="async"></a><figcaption>${caption} <a href="${src}" target="_blank" rel="noopener noreferrer">Open full image ↗</a></figcaption></figure>`;
   }
   const progressBar = () => `<div class="progress-track" role="progressbar" aria-label="Lessons completed" aria-valuemin="0" aria-valuemax="${lessons.length}" aria-valuenow="${state.completed.length}"><span style="width:${progress()}%"></span></div><span class="progress-label">${state.completed.length} of ${lessons.length} lessons completed</span>`;
-  const lessonCard = lesson => `<article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">${lesson.symbol}</span>${bookmark(`lesson/${lesson.id}`,lesson.title)}</div><span class="eyebrow">${lesson.category}</span><h3><a class="stretched" href="#lesson/${lesson.id}">${lesson.title}</a></h3><p>${lesson.intro}</p><div class="meta"><span>${lesson.time} MIN READ</span><span>${state.completed.includes(lesson.id) ? 'COMPLETED ✓' : 'EXPLORE ↗'}</span></div></article>`;
+  const lessonCard = lesson => `<article class="card"><div class="card-top"><span class="card-icon" aria-hidden="true">${lesson.symbol}</span>${bookmark(`lesson/${lesson.id}`,lesson.title)}</div><span class="eyebrow">${lesson.category}</span><h3><a class="stretched" href="#lesson/${lesson.id}">${lesson.title}</a></h3><p>${lesson.intro}</p><div class="meta"><span>${lesson.time} MIN ${lesson.scenario ? 'PRACTICE' : 'READ'}</span><span>${state.completed.includes(lesson.id) ? 'COMPLETED ✓' : 'EXPLORE ↗'}</span></div></article>`;
   const lessonRow = (lesson, index) => `<a class="lesson-row" href="#lesson/${lesson.id}"><span class="number">${String(index + 1).padStart(2,'0')}</span><div><h3>${lesson.title}</h3><p>${lesson.category.toLowerCase()}</p></div><span class="row-end">${state.completed.includes(lesson.id) ? '<span class="badge">Completed ✓</span>' : `${lesson.time} min`}<span aria-hidden="true">↗</span></span></a>`;
   function home() {
     const next = lessons.find(lesson => !state.completed.includes(lesson.id)) || lessons[0];
     const resume = lessons.find(lesson => lesson.id === state.lastLesson && !state.completed.includes(lesson.id)) || next;
     return `<section class="hero"><div><span class="eyebrow">A LITTLE CURIOSITY. A WHOLE NEW WAY TO SEE.</span><h1>Learn your camera.<br><em>Find your eye.</em></h1><p>Your Sony α6400, a good lens, and somewhere to begin. Build your confidence one small lesson at a time.</p><div class="hero-actions"><a class="button" href="#lesson/${resume.id}">${state.lastLesson ? 'Continue learning' : 'Start with the basics'} <span aria-hidden="true">↗</span></a><a class="text-link" href="#learn">Explore the learning path</a></div></div><div><div class="hero-art" role="img" aria-label="Illustrated landscape with a sun and hills framed by a viewfinder"><div class="sun"></div><div class="hill"></div><div class="hill two"></div><div class="hill three"></div><div class="viewfinder"><span class="cross"></span></div><div class="art-label"><span>NOTICE THE LIGHT</span><span>FRAME YOUR WORLD ↗</span></div></div><div class="art-caption">A little landscape illustration. Your photographs will come later.</div></div></section>
     <div class="stats"><div class="stat"><strong>${String(lessons.length).padStart(2,'0')}</strong><span>lessons to explore</span></div><div class="stat"><strong>${String(state.completed.length).padStart(2,'0')}</strong><span>lessons completed</span></div><div class="stat"><strong>${String(guides.length).padStart(2,'0')}</strong><span>guides for your next shoot</span></div></div>
-    <div class="section-head"><h2>Your next small step</h2><a class="text-link" href="#learn">View learning path ↗</a></div><div class="two-column"><section class="resume-card"><div class="lesson-orbit" aria-hidden="true">${resume.symbol}</div><div><span class="eyebrow">${resume.category} · ${resume.time} MIN READ</span><h3>${resume.title}</h3><p>${resume.intro}</p><a class="button" href="#lesson/${resume.id}">Open lesson <span aria-hidden="true">→</span></a></div></section><section class="practice-teaser"><span class="eyebrow">TAKE YOUR CAMERA OUT</span><h3>One object.<br>Three apertures.</h3><p>A window, an everyday object, and ten minutes to discover what f-numbers do.</p><a class="text-link" href="#practice">Try the first assignment ↗</a></section></div>
+    <div class="section-head"><h2>Your next small step</h2><a class="text-link" href="#learn">View learning path ↗</a></div><div class="two-column"><section class="resume-card"><div class="lesson-orbit" aria-hidden="true">${resume.symbol}</div><div><span class="eyebrow">${resume.category} · ${resume.time} MIN ${resume.scenario ? 'PRACTICE' : 'READ'}</span><h3>${resume.title}</h3><p>${resume.intro}</p><a class="button" href="#lesson/${resume.id}">Open lesson <span aria-hidden="true">→</span></a></div></section><section class="practice-teaser"><span class="eyebrow">TAKE YOUR CAMERA OUT</span><h3>One object.<br>Three apertures.</h3><p>A window, an everyday object, and ten minutes to discover what f-numbers do.</p><a class="text-link" href="#practice">Try the first assignment ↗</a></section></div>
     <section class="section-space"><div class="section-head"><h2>Meet the three essentials</h2><p>Small changes. Different photographs.</p></div><div class="card-grid">${lessons.slice(1,4).map(lessonCard).join('')}</div></section>`;
   }
   function learn() {
@@ -53,11 +53,18 @@
       {id: undefined, title: '01 / The foundations', intro: 'Understand light, exposure and focus one concept at a time.'},
       {id: 'controls', title: '02 / Camera in practice', intro: 'Set up your camera, learn its controls and explore the confirmed Sigma 18–50mm lens.'},
       {id: 'fieldcraft', title: '03 / Composition & light', intro: 'Arrange the frame and work with the light you already have. Each lesson ends with a small photo assignment.'},
-      {id: 'editing', title: '04 / Edit with intention', intro: 'Use one free RAW editor to make natural, polished JPEGs while keeping your originals.'}
+      {id: 'editing', title: '04 / Edit with intention', intro: 'Use one free RAW editor to make natural, polished JPEGs while keeping your originals.'},
+      {id: 'scenarios', title: '05 / Put your skills to work', intro: 'Six practical scenarios with starting settings, visible success criteria and a repeat attempt. Start with a cup by a window.'}
     ];
     return title('YOUR LEARNING PATH','Start simple. Build from there.','Follow a stage, or return to a concept whenever you need it.') + progressBar() +
       stages.map(stage=>`<section class="section-space" data-stage="${stage.id || 'foundations'}"><div class="section-head"><h2>${stage.title}</h2><span class="badge">Available now</span></div><p>${stage.intro}</p><div class="lesson-list">${lessons.filter(item=>item.stage===stage.id).map(item=>lessonRow(item,lessons.indexOf(item))).join('')}</div></section>`).join('') +
       `<div class="roadmap"><span class="eyebrow">THE ROAD AHEAD</span><h3>Keep practising, then build on the results.</h3><p>The full menu reference is available with source-linked concise guidance. Next, use the field review on your own camera and apply the editing workflow to your best local originals. Cloud uploads remain separate.</p><a class="text-link" href="#editing">Open the free editing workflow →</a></div><section class="section-space"><h2>A small dictionary for your camera and edits</h2><dl class="glossary">${glossary.map(([term,definition,id])=>`<div><dt><a href="#lesson/${id}">${term}</a></dt><dd>${definition}</dd></div>`).join('')}</dl></section>`;
+  }
+  function scenariosPage() {
+    return title('TRY A SCENARIO','One situation. One deliberate improvement.','Six free challenges for your Sony a6400 and Sigma 18–50mm. Start at home, then take the same thinking outside.') +
+      '<div class="callout"><strong>Learn by doing, at your own pace.</strong><p>Each time shown is suggested practice time. Use the starting settings, record what the camera actually chose, compare the result, then change one thing and try again. A = you choose aperture; M = you choose aperture and shutter; ISO AUTO = the camera chooses ISO. AF-S focuses once; AF-C keeps adjusting while activated.</p><p>Use available light and equipment you already own. These are original exercises, not example photographs or guaranteed settings.</p></div><div class="card-grid">' +
+      lessons.filter(item=>item.scenario).map(lessonCard).join('') +
+      '<section class="section-space"><h2>Your five skills</h2><ol><li>Explain your aperture, shutter and ISO choices.</li><li>Focus on the intended subject and diagnose blur.</li><li>Choose useful light and a deliberate composition.</li><li>Make a natural edit and check the exported JPEG.</li><li>Improve a weak frame with one deliberate change.</li></ol><p>Each scenario has its own saved note, bookmark and completion button. Record actual filenames and observations; photos stay on your devices. The final challenge includes a self-review to repeat on another day. Finishing pages alone does not establish intermediate ability.</p><a class="button secondary" href="#notebook">Export your practice notes →</a></section>';
   }
   function editingPage() {
     const editLessons = lessons.filter(item => item.stage === 'editing');
@@ -154,14 +161,21 @@
     const route = location.hash.slice(1) || 'home';
     const [page, ...parts] = route.split('/');
     let detail; try { detail = decodeURIComponent(parts.join('/')); } catch { detail = ''; }
-    const renderers = {home, learn, lesson:()=>lessonPage(detail), guides:()=>guidesPage(), guide:()=>guidesPage(detail), editing:editingPage, practice, notebook, kit, share:()=>sharingPage(detail), camera:()=>cameraPage(detail), menu:()=>menuPage(detail), search:()=>searchPage(detail)};
+    const renderers = {home, learn, scenarios:scenariosPage, lesson:()=>lessonPage(detail), guides:()=>guidesPage(), guide:()=>guidesPage(detail), editing:editingPage, practice, notebook, kit, share:()=>sharingPage(detail), camera:()=>cameraPage(detail), menu:()=>menuPage(detail), search:()=>searchPage(detail)};
     main.innerHTML = (Object.prototype.hasOwnProperty.call(renderers,page) ? renderers[page] : notFound)();
     if(page==='practice'){
+      main.querySelector('.callout').insertAdjacentHTML('beforebegin','<div class="callout"><strong>Ready to practise all five skills?</strong> <a href="#scenarios">Try six real-life scenarios →</a> Each has settings, comparisons, troubleshooting and a saved practice record.</div>');
       const assignments=lessons.filter(item=>['portrait-light-assignment','indoor-light-assignment','backlit-assignment'].includes(item.id));
       main.querySelector('.callout').insertAdjacentHTML('afterend',`<section class="section-space practice-assignments"><h2>Put composition and light together</h2><p>Each assignment has its own review prompts and notebook space. Save the actual settings and one observation after your shoot.</p><div class="card-grid">${assignments.map(lessonCard).join('')}</div></section>`);
     }
     if(page==='lesson'){
       const lesson=lessons.find(item=>item.id===detail);
+      if(lesson && lesson.scenario){
+        main.querySelector('.exercise h2').textContent='Make your practice record';
+        main.querySelector('.reading > .eyebrow').textContent='PRACTICE SCENARIO · ABOUT '+lesson.time+' MIN TO TRY';
+        main.querySelector('.breadcrumb').href='#scenarios';
+        main.querySelector('.breadcrumb').textContent='← All practice scenarios';
+      }
       if(lesson && lesson.sources){
         const note=main.querySelector('.source-note');
         note.innerHTML=lesson.sourceNote ? escape(lesson.sourceNote) : `Camera instructions checked 2026-10-11 against Sony’s English a6400 guide. Practical settings and assignments are recommendations, not guaranteed results. Physical-camera walkthrough testing remains pending.${detail==='better-photos'?' No flagship-phone comparison has been performed.':''}`;
@@ -186,7 +200,7 @@
       }
     }
     const currentLesson = page === 'lesson' ? lessons.find(item => item.id === detail) : null;
-    const active = currentLesson && currentLesson.stage === 'editing' ? 'editing' : ({lesson:'learn',guide:'guides',search:'learn',menu:'camera'}[page] || page);
+    const active = currentLesson && currentLesson.scenario ? 'scenarios' : currentLesson && currentLesson.stage === 'editing' ? 'editing' : ({lesson:'learn',guide:'guides',search:'learn',menu:'camera'}[page] || page);
     document.querySelectorAll('[data-nav]').forEach(link=> { if(link.dataset.nav===active) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current'); });
     const heading = main.querySelector('h1');
     document.title = `${heading ? heading.textContent : 'Your field guide'} — First Light`;
